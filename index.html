@@ -423,6 +423,29 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
 .btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid rgba(87,68,219,.35);outline-offset:3px}
 @media(max-width:700px){.topbar{background:rgba(232,237,244,.98)}.nav-links.open{background:linear-gradient(135deg,#e8edf4,#edf0f5)}.footer-main{padding:20px}.hero{padding-top:44px}}
 
+  
+/* Rotating activity spotlight notifications */
+.activity-spotlight{
+  position:fixed;left:22px;bottom:22px;z-index:55;
+  width:min(350px,calc(100vw - 44px));padding:15px 17px;
+  display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px;
+  border:1px solid rgba(255,255,255,.96);border-radius:22px;
+  color:#171923;background:rgba(255,255,255,.96);
+  box-shadow:0 16px 42px rgba(47,55,75,.17);
+  opacity:0;transform:translateY(14px);pointer-events:none;
+  transition:opacity .35s ease,transform .35s ease;
+  backdrop-filter:blur(16px)
+}
+.activity-spotlight.is-visible{opacity:1;transform:translateY(0)}
+.spotlight-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:#efedff;font-size:20px}
+.spotlight-copy{min-width:0}
+.spotlight-label{display:block;margin-bottom:2px;color:#6654db;font-size:9px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.spotlight-title{display:block;overflow:hidden;color:#25283a;font-size:12px;font-weight:800;text-overflow:ellipsis;white-space:nowrap}
+.spotlight-subtitle{display:block;color:#737b89;font-size:10px}
+.spotlight-amount{color:#5744db;font-size:11px;font-weight:900;white-space:nowrap}
+@media(max-width:700px){.activity-spotlight{left:12px;bottom:84px;width:min(340px,calc(100vw - 24px));padding:12px 13px;gap:9px}}
+@media(prefers-reduced-motion:reduce){.activity-spotlight{transition:none}}
+
   </style>
 </head>
 <body>
@@ -637,7 +660,57 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
 
   <button class="whatsapp" id="whatsappToggle" type="button" aria-label="Show WhatsApp contact details" aria-expanded="false">💬</button><div class="contact-popover" id="whatsappPanel" hidden><strong>WhatsApp support</strong><span id="supportPhone">0744405402</span><button id="copyPhone" type="button">Copy number</button><small>Save this number to your contacts to reach EarnQube.</small></div>
 
+  
+  <aside class="activity-spotlight" id="activitySpotlight" role="status" aria-live="polite" aria-atomic="true" aria-label="EarnQube activity spotlight">
+    <span class="spotlight-icon" id="spotlightIcon" aria-hidden="true">💬</span>
+    <span class="spotlight-copy">
+      <span class="spotlight-label">Activity spotlight</span>
+      <span class="spotlight-title" id="spotlightTitle">Moderated Chat Activity</span>
+      <span class="spotlight-subtitle" id="spotlightSubtitle">Explore this featured activity</span>
+    </span>
+    <span class="spotlight-amount" id="spotlightAmount">UGX 10,000</span>
+  </aside>
+
   <script>
+
+
+    // Spotlight cards highlight listed activities; they are not transaction notifications.
+    const spotlightItems = [
+      {icon:"💬",title:"Moderated Chat Activity",subtitle:"Listed amount · subject to approval",amount:"UGX 10,000"},
+      {icon:"🎵",title:"TikTok Video Tasks",subtitle:"Listed amount · subject to approval",amount:"UGX 5,000"},
+      {icon:"▶️",title:"YouTube Video Tasks",subtitle:"Listed amount · subject to approval",amount:"UGX 5,000"},
+      {icon:"⚽",title:"DLS Challenges",subtitle:"Listed amount · subject to approval",amount:"UGX 5,000"},
+      {icon:"📢",title:"Sponsored Content Tasks",subtitle:"Listed amount · subject to approval",amount:"UGX 2,000"},
+      {icon:"📲",title:"WhatsApp Status Promotion",subtitle:"Listed amount · subject to approval",amount:"UGX 2,500"},
+      {icon:"🛍️",title:"Product Advertising",subtitle:"Listed amount · subject to approval",amount:"UGX 2,500"},
+      {icon:"🧠",title:"Daily Trivia",subtitle:"Listed amount · subject to approval",amount:"UGX 2,500"},
+      {icon:"➗",title:"Quick Math Challenge",subtitle:"Listed amount · subject to approval",amount:"UGX 2,500"},
+      {icon:"🎨",title:"Colour Recognition",subtitle:"Listed amount · subject to approval",amount:"UGX 2,500"}
+    ];
+    const spotlight = document.getElementById("activitySpotlight");
+    const spotlightIcon = document.getElementById("spotlightIcon");
+    const spotlightTitle = document.getElementById("spotlightTitle");
+    const spotlightSubtitle = document.getElementById("spotlightSubtitle");
+    const spotlightAmount = document.getElementById("spotlightAmount");
+    if (spotlight && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      let spotlightIndex = 0;
+      const showSpotlight = () => {
+        const item = spotlightItems[spotlightIndex];
+        spotlightIcon.textContent = item.icon;
+        spotlightTitle.textContent = item.title;
+        spotlightSubtitle.textContent = item.subtitle;
+        spotlightAmount.textContent = item.amount;
+        spotlight.classList.add("is-visible");
+        spotlightIndex = (spotlightIndex + 1) % spotlightItems.length;
+      };
+      window.setTimeout(() => {
+        showSpotlight();
+        window.setInterval(() => {
+          spotlight.classList.remove("is-visible");
+          window.setTimeout(showSpotlight, 450);
+        }, 8500);
+      }, 1800);
+    }
 
     const whatsappToggle = document.getElementById("whatsappToggle");
     const whatsappPanel = document.getElementById("whatsappPanel");
