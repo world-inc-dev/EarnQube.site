@@ -446,6 +446,55 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
 @media(max-width:700px){.activity-spotlight{left:12px;bottom:84px;width:min(340px,calc(100vw - 24px));padding:12px 13px;gap:9px}}
 @media(prefers-reduced-motion:reduce){.activity-spotlight{transition:none}}
 
+  
+    /* Refined typography palette: deep slate text with a restrained indigo accent */
+    :root {
+      --type-strong:#202638;
+      --type-body:#465166;
+      --type-muted:#667287;
+      --type-soft:#7a8597;
+      --type-accent:#5142bd;
+      --type-accent-dark:#40339d;
+    }
+    body { color:var(--type-strong); }
+    h1,h2,h3,.activity-card h3,.step h3,.faq-item h3,
+    .cta-panel h2,.money-total {
+      color:var(--type-strong);
+      text-shadow:none;
+    }
+    .gold-text { color:var(--type-accent-dark); }
+    .hero-copy,.section-head p,.activity-card p,.step p,.faq-item p,
+    .cta-panel p,.footer-brand p,.footer-bottom {
+      color:var(--type-body);
+    }
+    .hero-note,.activity-meta,.money-caption,.card-top {
+      color:var(--type-muted);
+    }
+    .section-kicker,.eyebrow,.activity-link,.mini-amount {
+      color:var(--type-accent-dark);
+    }
+    .eyebrow { font-weight:800; }
+    .activity-link:hover { color:#29236f; }
+    .money-tag,.status-pill {
+      color:#39318d;
+      font-weight:800;
+    }
+    .mini-left { color:#293247; }
+    .mini-amount { color:#373184; }
+    .step-number { color:#39318d; }
+    .nav-links { color:#394357; }
+    .nav-links a:hover { color:#40339d; }
+    .btn-outline { color:#39318d; }
+    .footer-links,.footer-contact-label { color:#394357; }
+    .footer-links a:hover { color:#40339d; }
+    .spotlight-title { color:#202638; }
+    .spotlight-subtitle { color:#667287; }
+    .spotlight-amount { color:#39318d; }
+    @media (prefers-contrast: more) {
+      .hero-copy,.section-head p,.activity-card p,.step p,.faq-item p,
+      .cta-panel p,.activity-meta,.hero-note { color:#303b50; }
+    }
+
   </style>
 </head>
 <body>
