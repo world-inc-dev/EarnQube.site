@@ -495,7 +495,125 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
       .cta-panel p,.activity-meta,.hero-note { color:#303b50; }
     }
 
-  </style>
+  
+    /* Header and footer now use the same pastel card language as the page */
+    .topbar {
+      padding:10px 0;
+      background:rgba(232,237,244,.94);
+      border:0;
+      box-shadow:none;
+      backdrop-filter:blur(16px);
+    }
+    .topbar .nav {
+      min-height:76px;
+      padding:12px 22px;
+      border:2px solid rgba(255,255,255,.98);
+      border-radius:30px;
+      background:linear-gradient(115deg,#d9f2ff 0%,#e6d9f4 55%,#c9f0e5 100%);
+      box-shadow:0 10px 25px rgba(47,55,75,.06);
+    }
+    .topbar .brand { color:#202638; }
+    .topbar .brand span:last-child { color:#202638; }
+    .topbar .brand span:last-child span { color:#5142bd; }
+    .topbar .brand-mark {
+      border:2px solid rgba(255,255,255,.95);
+      border-radius:15px;
+      color:#fff;
+      background:linear-gradient(135deg,#7564ed,#5140cf);
+      box-shadow:0 7px 16px rgba(81,64,209,.14);
+    }
+    .topbar .nav-links { color:#394357; }
+    .topbar .nav-links a {
+      padding:9px 11px;
+      border:1px solid transparent;
+      border-radius:13px;
+      color:#394357;
+    }
+    .topbar .nav-links a:hover {
+      color:#40339d;
+      border-color:#fff;
+      background:rgba(255,255,255,.7);
+    }
+    .topbar .nav-actions .btn-outline {
+      color:#39318d;
+      border:1px solid rgba(255,255,255,.95);
+      background:rgba(255,255,255,.68);
+    }
+    .topbar .nav-actions .btn-gold {
+      color:#fff;
+      background:linear-gradient(135deg,#7564ed,#5140d1);
+    }
+    .topbar .menu-toggle {
+      color:#33365b;
+      border:1px solid #fff;
+      background:rgba(255,255,255,.82);
+    }
+    footer {
+      margin-top:32px;
+      padding:28px 0 22px;
+      color:#202638;
+      background:transparent;
+      border:0;
+    }
+    footer .footer-main {
+      padding:28px;
+      border:2px solid rgba(255,255,255,.98);
+      border-radius:34px;
+      background:linear-gradient(115deg,#d9f2ff 0%,#e6d9f4 55%,#c9f0e5 100%);
+      box-shadow:0 10px 25px rgba(47,55,75,.06);
+    }
+    footer .brand { color:#202638; }
+    footer .brand span:last-child { color:#202638; }
+    footer .brand span:last-child span { color:#5142bd; }
+    footer .brand-mark {
+      color:#fff;
+      border:2px solid rgba(255,255,255,.95);
+      background:linear-gradient(135deg,#7564ed,#5140cf);
+    }
+    footer .footer-brand p { color:#465166; }
+    footer .footer-links { color:#394357; }
+    footer .footer-links a,
+    footer .footer-contact-label {
+      color:#394357;
+      border:1px solid rgba(255,255,255,.95);
+      border-radius:13px;
+      background:rgba(255,255,255,.62);
+    }
+    footer .footer-links a:hover {
+      color:#40339d;
+      background:#fff;
+    }
+    footer .footer-bottom {
+      margin-top:16px;
+      padding:16px 8px 0;
+      border-top:1px solid rgba(255,255,255,.95);
+      color:#596579;
+    }
+    @media(max-width:700px) {
+      .topbar { padding:7px 0; }
+      .topbar .nav {
+        min-height:66px;
+        padding:9px 12px;
+        border-radius:24px;
+      }
+      .topbar .nav-links.open {
+        top:calc(100% + 7px);
+        left:15px;
+        right:15px;
+        padding:12px;
+        border:2px solid #fff;
+        border-radius:22px;
+        background:linear-gradient(115deg,#d9f2ff,#e6d9f4 55%,#c9f0e5);
+        box-shadow:0 12px 25px rgba(47,55,75,.10);
+      }
+      .topbar .nav-links a { border-bottom:1px solid rgba(255,255,255,.7); }
+      footer { padding:20px 0 18px; }
+      footer .footer-main { padding:21px; border-radius:28px; }
+      footer .footer-links { gap:9px; }
+      footer .footer-bottom { gap:8px; }
+    }
+
+</style>
 </head>
 <body>
   <header class="topbar">
