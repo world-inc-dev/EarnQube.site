@@ -403,6 +403,22 @@
       .footer-bottom { gap:8px; }
     }
 
+
+    /* Rotating example activity pop-up with clear demo labelling */
+    .activity-toast { position:fixed; left:20px; bottom:20px; z-index:55; width:min(390px,calc(100vw - 40px)); padding:14px 16px; border:1px solid #fff; border-radius:20px; color:#171923; background:rgba(255,255,255,.97); box-shadow:0 16px 42px rgba(47,55,75,.18); animation:toastIn .35s ease both; }
+    .activity-toast[hidden] { display:none; }
+    .toast-label { display:block; margin-bottom:9px; color:#5744db; font-size:9px; font-weight:900; letter-spacing:1.1px; }
+    .toast-content { display:flex; align-items:center; gap:10px; }
+    .toast-avatar { flex:0 0 38px; width:38px; height:38px; display:grid; place-items:center; border-radius:13px; color:#5744db; background:#eeeaff; font-weight:900; }
+    .toast-copy { min-width:0; flex:1; }
+    .toast-copy strong,.toast-copy span { display:block; }
+    .toast-copy strong { font-size:12px; }
+    .toast-copy span { color:#727987; font-size:10px; }
+    .toast-amount { color:#5744db; font-size:13px; white-space:nowrap; }
+    .toast-footnote { display:block; margin-top:9px; color:#858b98; font-size:9px; }
+    @keyframes toastIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+    @media(max-width:700px) { .activity-toast { left:12px; bottom:82px; width:min(370px,calc(100vw - 24px)); } }
+
   </style>
 </head>
 <body>
@@ -617,7 +633,38 @@
 
   <button class="whatsapp" id="whatsappToggle" type="button" aria-label="Show WhatsApp contact details" aria-expanded="false">💬</button><div class="contact-popover" id="whatsappPanel" hidden><strong>WhatsApp support</strong><span id="supportPhone">0744405402</span><button id="copyPhone" type="button">Copy number</button><small>Save this number to your contacts to reach EarnQube.</small></div>
 
+  <div class="activity-toast" id="activityToast" role="status" aria-live="polite" hidden>
+    <span class="toast-label">EXAMPLE ACTIVITY</span>
+    <div class="toast-content"><span class="toast-avatar" id="toastAvatar">E</span><div class="toast-copy"><strong id="toastTitle">Example member</strong><span id="toastDetail">Withdrawal example</span></div><strong class="toast-amount" id="toastAmount">UGX 509,500</strong></div>
+    <span class="toast-footnote">Illustrative preview — not a verified transaction</span>
+  </div>
+
   <script>
+
+    // Clearly labelled illustrative activity examples; not live transaction claims.
+    const activityExamples = [
+      { initial:"U", title:"Example member · Uganda", detail:"Withdrawal example", amount:"UGX 509,500" },
+      { initial:"U", title:"Example member · Uganda", detail:"Account activation example", amount:"ACTIVATED" },
+      { initial:"U", title:"Example member · Uganda", detail:"Withdrawal example", amount:"UGX 1,500,000" },
+      { initial:"U", title:"Example member · Uganda", detail:"Chat activity earnings example", amount:"UGX 250,000" },
+      { initial:"K", title:"Example member · Kenya", detail:"Activity earnings example", amount:"KES 2,500" },
+      { initial:"U", title:"Example member · United States", detail:"Activity earnings example", amount:"$250" }
+    ];
+    const activityToast = document.getElementById("activityToast");
+    let activityIndex = 0;
+    function showActivityExample() {
+      const item = activityExamples[activityIndex];
+      document.getElementById("toastAvatar").textContent = item.initial;
+      document.getElementById("toastTitle").textContent = item.title;
+      document.getElementById("toastDetail").textContent = item.detail;
+      document.getElementById("toastAmount").textContent = item.amount;
+      activityToast.hidden = false;
+      activityIndex = (activityIndex + 1) % activityExamples.length;
+    }
+    window.setTimeout(() => {
+      showActivityExample();
+      window.setInterval(showActivityExample, 6500);
+    }, 2200);
 
     const whatsappToggle = document.getElementById("whatsappToggle");
     const whatsappPanel = document.getElementById("whatsappPanel");
