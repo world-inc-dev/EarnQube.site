@@ -773,6 +773,47 @@
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
     }
 
+
+    /* Paid activity cards */
+    .paid-activity-grid { gap: 15px; }
+    .paid-activity-card {
+      display: flex; flex-direction: column; align-items: stretch;
+      min-height: 255px; gap: 9px;
+      background: linear-gradient(155deg, rgba(201,168,76,.065), rgba(17,27,21,.96) 48%);
+    }
+    .paid-activity-top {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 3px;
+    }
+    .paid-activity-icon {
+      width: 44px; height: 44px; display: grid; place-items: center;
+      border-radius: 13px; font-size: 21px;
+      background: rgba(201,168,76,.10);
+      border: 1px solid rgba(201,168,76,.17);
+    }
+    .paid-reward {
+      color: #f0d98e; font-size: 14px; font-weight: 800;
+      padding: 7px 10px; border-radius: 9px;
+      background: rgba(201,168,76,.10);
+      border: 1px solid rgba(201,168,76,.22);
+      white-space: nowrap;
+    }
+    .paid-activity-card h3 { font-size: 16px; margin: 2px 0 0; }
+    .paid-activity-card p { font-size: 12px; line-height: 1.7; flex: 1; }
+    .paid-activity-meta {
+      color: var(--accent2); font-size: 10px; font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .paid-activity-disclaimer {
+      margin-top: 14px; padding: 12px 14px;
+      border: 1px solid rgba(201,168,76,.14);
+      border-radius: 11px; background: rgba(201,168,76,.045);
+      color: var(--muted); font-size: 11px; line-height: 1.65;
+    }
+    @media (min-width: 760px) {
+      .paid-activity-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    }
+
   </style>
 </head>
 
@@ -874,6 +915,10 @@
 
   <a href="#gaming-tasks" onclick="toggleMenu()">
     Gaming Tasks
+  </a>
+
+  <a href="#paid-challenges" onclick="toggleMenu()">
+    Paid Activities
   </a>
 
   <a href="#how-to-earn" onclick="toggleMenu()">
@@ -1346,6 +1391,86 @@
     </div>
 
   </div>
+
+</section>
+
+
+<!-- =========================
+     PAID ACTIVITIES & CHALLENGES
+========================= -->
+
+<section class="mobile-section" id="paid-challenges">
+
+  <div class="section-tag">PAID ACTIVITIES</div>
+  <h2>More ways to earn with your skills</h2>
+  <p style="color:var(--muted);font-size:13px;max-width:700px;margin:-8px 0 18px;">
+    Take part in simple promotional activities and short skill-based challenges.
+    Each listed activity shows its advertised reward for an approved completion.
+  </p>
+
+  <div class="mobile-stack paid-activity-grid">
+
+    <article class="mobile-card paid-activity-card">
+      <div class="paid-activity-top">
+        <span class="paid-activity-icon">📲</span>
+        <span class="paid-reward">UGX 500</span>
+      </div>
+      <h3>WhatsApp Status Promotion</h3>
+      <p>Share an approved EarnQube or partner campaign on your WhatsApp Status and submit the required proof for review.</p>
+      <div class="paid-activity-meta">Reward per approved status task</div>
+      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">Join to explore</a>
+    </article>
+
+    <article class="mobile-card paid-activity-card">
+      <div class="paid-activity-top">
+        <span class="paid-activity-icon">🛍️</span>
+        <span class="paid-reward">UGX 500</span>
+      </div>
+      <h3>Product Advertising</h3>
+      <p>Help promote selected products using campaign images, descriptions and sharing instructions provided for each task.</p>
+      <div class="paid-activity-meta">Reward per approved promotion</div>
+      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">View opportunities</a>
+    </article>
+
+    <article class="mobile-card paid-activity-card">
+      <div class="paid-activity-top">
+        <span class="paid-activity-icon">🧠</span>
+        <span class="paid-reward">UGX 500</span>
+      </div>
+      <h3>Daily Trivia</h3>
+      <p>Answer a short set of general-knowledge questions. Complete the challenge according to its displayed rules.</p>
+      <div class="paid-activity-meta">Reward per qualifying completion</div>
+      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">Try trivia</a>
+    </article>
+
+    <article class="mobile-card paid-activity-card">
+      <div class="paid-activity-top">
+        <span class="paid-activity-icon">➗</span>
+        <span class="paid-reward">UGX 500</span>
+      </div>
+      <h3>Quick Math Challenge</h3>
+      <p>Solve a short series of arithmetic questions and submit your answers for an accuracy check.</p>
+      <div class="paid-activity-meta">Reward per qualifying completion</div>
+      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">Solve a challenge</a>
+    </article>
+
+    <article class="mobile-card paid-activity-card">
+      <div class="paid-activity-top">
+        <span class="paid-activity-icon">🎨</span>
+        <span class="paid-reward">UGX 500</span>
+      </div>
+      <h3>Colour Recognition Challenge</h3>
+      <p>Test your observation skills by identifying colours, matching patterns and completing quick visual rounds.</p>
+      <div class="paid-activity-meta">Reward per qualifying completion</div>
+      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">Play colour challenge</a>
+    </article>
+
+  </div>
+
+  <p class="paid-activity-disclaimer">
+    Rewards are subject to task availability, campaign instructions and successful review.
+    Check the task details in your member account before participating.
+  </p>
 
 </section>
 
