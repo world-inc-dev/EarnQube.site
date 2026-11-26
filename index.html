@@ -198,52 +198,36 @@
       *, *::before, *::after { transition-duration: .01ms !important; }
     }
 
-    /* Professional EarnQube visual refresh: navy, white and teal */
-    body { color: #172033; background: radial-gradient(ellipse at 78% 2%, rgba(15,118,110,.08), transparent 31rem), #f4f7fb; }
-    .topbar { background: rgba(255,255,255,.94); border-bottom-color: #e4eaf2; }
-    .brand { color: #17365d; }
-    .brand-mark { color: #fff; background: linear-gradient(145deg,#24527f,#17365d); box-shadow: 0 7px 24px rgba(23,54,93,.16); }
-    .brand span:last-child, .gold-text { color: #0f766e; }
-    .nav-links { color: #526176; }
-    .nav-links a:hover, .footer-links a:hover { color: #0f766e; }
-    .btn-gold { color: #fff; background: linear-gradient(135deg,#1b806f,#0f766e); box-shadow: 0 10px 25px rgba(15,118,110,.16); }
-    .btn-outline { color: #17365d; background: #fff; border-color: #d8e1ec; }
-    .btn-outline:hover { border-color: #0f766e; }
-    .menu-toggle { background: #fff; color: #17365d; border-color: #d8e1ec; }
-    .eyebrow { color: #0f766e; background: #eaf5f3; border-color: #cfe7e2; }
-    .eyebrow-dot { background: #0f766e; box-shadow: 0 0 13px rgba(15,118,110,.3); }
-    .hero-copy, .section-head p { color: #596579; }
-    .hero-note, .activity-meta { color: #778397; }
-    .visual-glow { background: rgba(15,118,110,.10); }
-    .earn-card { border-color: #dce5ee; background: linear-gradient(150deg,#fff,#f7fafc); box-shadow: 0 24px 70px rgba(23,54,93,.12); }
-    .card-top, .reward-caption { color: #657287; }
-    .status-pill, .reward-tag { color: #0f766e; background: #e8f5f2; }
-    .reward-total { color: #17365d; }
-    .mini-row { border-color: #e8edf3; background: #f8fafc; }
-    .mini-icon { background: #eaf5f3; }
-    .mini-amount, .activity-link { color: #0f766e; }
-    .section-kicker { color: #0f766e; }
-    .activity-card, .step, .faq-item { color: #172033; border-color: #e1e8f0; background: #fff; box-shadow: 0 10px 30px rgba(23,54,93,.045); }
-    .activity-card:hover { border-color: #8bc7bb; box-shadow: 0 18px 38px rgba(23,54,93,.09); }
-    .activity-card.featured { border-color: #b8ddd5; }
-    .activity-card p, .step p, .faq-item p, .notice p { color: #596579; }
-    .activity-meta { border-top-color: #e8edf3; }
-    .reward-disclaimer, .notice { color: #526176; border-color: #d8e8e4; background: #f0f8f6; }
-    .how-section { background: linear-gradient(180deg,transparent,rgba(23,54,93,.035),transparent); }
-    .step-number, .notice-icon { color: #0f766e; background: #e8f5f2; }
-    .notice strong { color: #17365d; }
-    .cta-panel { border-color: #d5e5e1; background: radial-gradient(circle at 90% 10%,rgba(15,118,110,.09),transparent 32%),linear-gradient(130deg,#fff,#f1f7f8); box-shadow: 0 20px 55px rgba(23,54,93,.08); }
-    .cta-panel p { color: #596579; }
-    footer { background: #edf2f7; border-top-color: #e0e7ef; }
-    .footer-brand p, .footer-bottom { color: #68768a; }
-    .footer-links { color: #42516a; }
-    .whatsapp { position: fixed; right: 18px; bottom: 18px; z-index: 40; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; max-width: calc(100vw - 36px); padding: 14px 16px; border: 1px solid #d5e5e1; border-radius: 16px; color: #17365d; background: #fff; box-shadow: 0 12px 32px rgba(23,54,93,.15); font-size: 12px; }
-    .whatsapp strong { font-size: 18px; letter-spacing: .5px; }
-    .whatsapp small { color: #657287; font-size: 10px; }
-    .whatsapp button { padding: 7px 11px; border: 0; border-radius: 8px; color: #fff; background: #0f766e; font-size: 11px; font-weight: 800; cursor: pointer; }
-    .footer-contact-label { color: #42516a; }
-    @media (max-width:700px) { .nav-links { background: #fff; border-bottom-color: #e0e7ef; } .whatsapp { right: 10px; bottom: 10px; } }
-
+    /* Pastel gradient visual system inspired by the supplied screen reference */
+    :root { --bg:#eef2ff; --bg-soft:#f7f8ff; --panel:#fff; --panel-2:#fff; --line:rgba(101,83,220,.17); --gold:#6451e8; --gold-light:#5744db; --green:#7566e8; --green-soft:rgba(101,81,232,.10); --white:#17172d; --muted:#62627c; --muted-2:#8989a2; --shadow:0 22px 60px rgba(74,61,159,.13); }
+    body { color:#17172d; background:linear-gradient(118deg,#dff0ff 0%,#f9e2f6 52%,#e5f7f1 100%); }
+    .topbar { background:#08090d; border-bottom:1px solid rgba(255,255,255,.08); }
+    .brand { color:#fff; } .brand-mark { color:#fff; background:linear-gradient(145deg,#f0c94e,#bd8e1d); box-shadow:none; } .brand span:last-child { color:#fff; }
+    .nav-links { color:#d5d5e2; } .nav-links a:hover,.footer-links a:hover { color:#c4baff; }
+    .btn-gold { color:#fff; background:linear-gradient(135deg,#7664f1,#4e3bd2); box-shadow:0 10px 24px rgba(91,71,220,.23); }
+    .btn-outline { color:#5143c5; background:rgba(255,255,255,.72); border-color:rgba(101,81,232,.22); } .btn-outline:hover { border-color:#6451e8; }
+    .menu-toggle { color:#fff; background:#171820; border-color:#353542; }
+    .eyebrow { color:#5744db; background:rgba(255,255,255,.66); border-color:rgba(101,81,232,.17); } .eyebrow-dot { background:#7566e8; box-shadow:0 0 12px rgba(101,81,232,.35); }
+    .gold-text { color:#5744db; } .hero-copy,.section-head p { color:#555570; } .hero-note,.activity-meta { color:#777790; }
+    .visual-glow { background:rgba(117,102,232,.17); }
+    .earn-card { border:1px solid rgba(255,255,255,.88); background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(255,239,251,.93)); box-shadow:0 24px 70px rgba(74,61,159,.16); }
+    .card-top,.reward-caption { color:#696982; } .status-pill,.reward-tag { color:#5543d2; background:#eeeaff; } .reward-total { color:#17172d; }
+    .mini-row { border-color:rgba(101,81,232,.10); background:rgba(255,255,255,.74); } .mini-icon { background:#efedff; }
+    .mini-amount,.activity-link,.section-kicker { color:#5744db; }
+    .activity-card,.step,.faq-item { color:#17172d; border:1px solid rgba(255,255,255,.9); background:rgba(255,255,255,.82); box-shadow:0 12px 34px rgba(74,61,159,.07); backdrop-filter:blur(12px); }
+    .activity-card:hover { border-color:rgba(101,81,232,.38); box-shadow:0 18px 40px rgba(74,61,159,.13); } .activity-card.featured { border-color:rgba(101,81,232,.24); }
+    .activity-card p,.step p,.faq-item p { color:#62627c; } .activity-meta { border-top-color:rgba(101,81,232,.10); }
+    .how-section { background:rgba(255,255,255,.16); } .step-number { color:#5744db; background:#eeeaff; }
+    .cta-panel { border:1px solid rgba(255,255,255,.9); background:linear-gradient(120deg,rgba(255,255,255,.92),rgba(250,228,249,.9)); box-shadow:0 22px 60px rgba(74,61,159,.12); } .cta-panel p { color:#62627c; }
+    footer { background:#08090d; border-top-color:rgba(255,255,255,.08); } .footer-brand p,.footer-bottom { color:#a3a3b5; } .footer-links { color:#e0dfeb; }
+    .whatsapp { position:fixed; right:20px; bottom:20px; z-index:60; width:58px; height:58px; display:grid; place-items:center; border:0; border-radius:50%; color:#fff; background:linear-gradient(135deg,#7664f1,#4e3bd2); box-shadow:0 12px 30px rgba(79,60,202,.34); font-size:25px; cursor:pointer; }
+    .whatsapp:hover { transform:translateY(-3px); }
+    .contact-popover { position:fixed; right:20px; bottom:90px; z-index:59; width:min(280px,calc(100vw - 40px)); padding:18px; border:1px solid rgba(255,255,255,.95); border-radius:18px; color:#17172d; background:rgba(255,255,255,.96); box-shadow:0 18px 48px rgba(74,61,159,.2); }
+    .contact-popover[hidden] { display:none; } .contact-popover strong,.contact-popover span,.contact-popover small { display:block; }
+    .contact-popover strong { margin-bottom:7px; font:800 14px Manrope,sans-serif; } .contact-popover span { margin-bottom:11px; font:800 20px Manrope,sans-serif; letter-spacing:.5px; }
+    .contact-popover button { padding:9px 13px; border:0; border-radius:9px; color:#fff; background:#5b49df; font-size:12px; font-weight:800; cursor:pointer; }
+    .contact-popover small { margin-top:10px; color:#777790; font-size:10px; line-height:1.5; }
+    @media(max-width:700px) { .nav-links { background:#08090d; border-bottom-color:#282832; } .whatsapp { right:14px; bottom:14px; } .contact-popover { right:14px; bottom:82px; } }
   </style>
 </head>
 <body>
@@ -388,7 +372,6 @@
             <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Explore EarnQube <span>→</span></a>
           </article>
         </div>
-        <div class="reward-disclaimer" id="rewards">Displayed amounts are advertised task rewards, not guaranteed earnings. The chat activity displays UGX 10,000; TikTok and YouTube video tasks display UGX 5,000 each; sponsored-content tasks display UGX 2,000; and the original five activities display UGX 2,500 each. DLS challenges display UGX 5,000. All rewards depend on availability, eligibility, task rules and successful review.</div>
       </div>
     </section>
 
@@ -403,10 +386,6 @@
           <article class="step"><div class="step-number">01</div><h3>Create an account</h3><p>Use the registration link to open your EarnQube member account. Keep your sign-in details secure.</p></article>
           <article class="step"><div class="step-number">02</div><h3>Choose an activity</h3><p>Explore the available activities in your member area. Read the requirements, reward details and submission instructions first.</p></article>
           <article class="step"><div class="step-number">03</div><h3>Complete and submit</h3><p>Complete the task as instructed and provide any required answers or proof. A reward is subject to successful review.</p></article>
-        </div>
-        <div class="notice">
-          <div class="notice-icon">ⓘ</div>
-          <div><strong>Know the task conditions</strong><p>Not every activity is available at all times. Chat activities must be structured and moderated; keep conversations on-platform and do not share personal details. Video and sponsored-content tasks must follow platform and advertiser rules. Game and quiz challenges may have their own qualifying conditions. Check your member account before participating.</p></div>
         </div>
       </div>
     </section>
@@ -453,24 +432,30 @@
         <div class="footer-links">
           <a href="#activities">Activities</a><a href="#how-it-works">How it works</a><a href="#faq">FAQs</a>
           <a href="https://lofthela.com/user/login.php">Sign in</a>
-          <a href="mailto:earnqubesite@gmail.com">earnqubesite@gmail.com</a>
+          <a href="mailto:earnqubesite@gmail.com">Email support</a>
           <span class="footer-contact-label">WhatsApp: <strong>0744405402</strong> — save this number to your contacts</span>
         </div>
       </div>
-      <div class="footer-bottom"><span>© 2026 EarnQube.site. All rights reserved.</span><span>WhatsApp: <strong>0744405402</strong> · Save this number to your contacts</span></div>
+      <div class="footer-bottom"><span>© 2026 EarnQube.site. All rights reserved.</span><span>Support available by email and WhatsApp</span></div>
     </div>
   </footer>
 
-  <div class="whatsapp" aria-label="EarnQube WhatsApp contact"><span>WhatsApp support</span><strong id="supportPhone">0744405402</strong><button id="copyPhone" type="button">Copy number</button><small>Save this number in your contacts</small></div>
+  <button class="whatsapp" id="whatsappToggle" type="button" aria-label="Show WhatsApp contact details" aria-expanded="false">💬</button><div class="contact-popover" id="whatsappPanel" hidden><strong>WhatsApp support</strong><span id="supportPhone">0744405402</span><button id="copyPhone" type="button">Copy number</button><small>Save this number to your contacts to reach EarnQube.</small></div>
 
   <script>
 
+    const whatsappToggle = document.getElementById("whatsappToggle");
+    const whatsappPanel = document.getElementById("whatsappPanel");
     const copyPhone = document.getElementById("copyPhone");
     const supportPhone = document.getElementById("supportPhone");
+    whatsappToggle.addEventListener("click", () => {
+      const isOpen = whatsappPanel.hidden;
+      whatsappPanel.hidden = !isOpen;
+      whatsappToggle.setAttribute("aria-expanded", String(isOpen));
+    });
     copyPhone.addEventListener("click", async () => {
-      const number = supportPhone.textContent.trim();
       try {
-        await navigator.clipboard.writeText(number);
+        await navigator.clipboard.writeText(supportPhone.textContent.trim());
         copyPhone.textContent = "Copied";
       } catch (error) {
         const range = document.createRange();
@@ -481,7 +466,12 @@
         copyPhone.textContent = "Select number to copy";
       }
     });
-
+    document.addEventListener("click", (event) => {
+      if (!whatsappPanel.hidden && !whatsappPanel.contains(event.target) && !whatsappToggle.contains(event.target)) {
+        whatsappPanel.hidden = true;
+        whatsappToggle.setAttribute("aria-expanded", "false");
+      }
+    });
     const menuToggle = document.getElementById("menuToggle");
     const siteMenu = document.getElementById("siteMenu");
     menuToggle.addEventListener("click", () => {
