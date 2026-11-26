@@ -13,26 +13,26 @@
   <meta property="og:description" content="Explore chat, video, sponsored-content, gaming and skill-based activities on EarnQube.">
   <meta property="og:url" content="https://earnqube.site/">
   <meta property="og:site_name" content="EarnQube">
-  <meta name="theme-color" content="#090d0a">
+  <meta name="theme-color" content="#17365d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #090d0a;
-      --bg-soft: #0e1510;
-      --panel: #111a13;
-      --panel-2: #151f17;
-      --line: rgba(220, 190, 105, .17);
-      --gold: #d5b45c;
-      --gold-light: #f0d98e;
-      --green: #78936c;
-      --green-soft: rgba(120, 147, 108, .12);
-      --white: #f5f4ed;
-      --muted: #a8b0a5;
-      --muted-2: #7e887d;
+      --bg: #f4f7fb;
+      --bg-soft: #eef2f7;
+      --panel: #ffffff;
+      --panel-2: #f8fafc;
+      --line: rgba(23, 54, 93, .16);
+      --gold: #0f766e;
+      --gold-light: #0f766e;
+      --green: #17365d;
+      --green-soft: rgba(15, 118, 110, .09);
+      --white: #172033;
+      --muted: #596579;
+      --muted-2: #778397;
       --radius: 22px;
-      --shadow: 0 24px 70px rgba(0,0,0,.32);
+      --shadow: 0 24px 70px rgba(23,54,93,.10);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 92px; }
@@ -197,6 +197,53 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
     }
+
+    /* Professional EarnQube visual refresh: navy, white and teal */
+    body { color: #172033; background: radial-gradient(ellipse at 78% 2%, rgba(15,118,110,.08), transparent 31rem), #f4f7fb; }
+    .topbar { background: rgba(255,255,255,.94); border-bottom-color: #e4eaf2; }
+    .brand { color: #17365d; }
+    .brand-mark { color: #fff; background: linear-gradient(145deg,#24527f,#17365d); box-shadow: 0 7px 24px rgba(23,54,93,.16); }
+    .brand span:last-child, .gold-text { color: #0f766e; }
+    .nav-links { color: #526176; }
+    .nav-links a:hover, .footer-links a:hover { color: #0f766e; }
+    .btn-gold { color: #fff; background: linear-gradient(135deg,#1b806f,#0f766e); box-shadow: 0 10px 25px rgba(15,118,110,.16); }
+    .btn-outline { color: #17365d; background: #fff; border-color: #d8e1ec; }
+    .btn-outline:hover { border-color: #0f766e; }
+    .menu-toggle { background: #fff; color: #17365d; border-color: #d8e1ec; }
+    .eyebrow { color: #0f766e; background: #eaf5f3; border-color: #cfe7e2; }
+    .eyebrow-dot { background: #0f766e; box-shadow: 0 0 13px rgba(15,118,110,.3); }
+    .hero-copy, .section-head p { color: #596579; }
+    .hero-note, .activity-meta { color: #778397; }
+    .visual-glow { background: rgba(15,118,110,.10); }
+    .earn-card { border-color: #dce5ee; background: linear-gradient(150deg,#fff,#f7fafc); box-shadow: 0 24px 70px rgba(23,54,93,.12); }
+    .card-top, .reward-caption { color: #657287; }
+    .status-pill, .reward-tag { color: #0f766e; background: #e8f5f2; }
+    .reward-total { color: #17365d; }
+    .mini-row { border-color: #e8edf3; background: #f8fafc; }
+    .mini-icon { background: #eaf5f3; }
+    .mini-amount, .activity-link { color: #0f766e; }
+    .section-kicker { color: #0f766e; }
+    .activity-card, .step, .faq-item { color: #172033; border-color: #e1e8f0; background: #fff; box-shadow: 0 10px 30px rgba(23,54,93,.045); }
+    .activity-card:hover { border-color: #8bc7bb; box-shadow: 0 18px 38px rgba(23,54,93,.09); }
+    .activity-card.featured { border-color: #b8ddd5; }
+    .activity-card p, .step p, .faq-item p, .notice p { color: #596579; }
+    .activity-meta { border-top-color: #e8edf3; }
+    .reward-disclaimer, .notice { color: #526176; border-color: #d8e8e4; background: #f0f8f6; }
+    .how-section { background: linear-gradient(180deg,transparent,rgba(23,54,93,.035),transparent); }
+    .step-number, .notice-icon { color: #0f766e; background: #e8f5f2; }
+    .notice strong { color: #17365d; }
+    .cta-panel { border-color: #d5e5e1; background: radial-gradient(circle at 90% 10%,rgba(15,118,110,.09),transparent 32%),linear-gradient(130deg,#fff,#f1f7f8); box-shadow: 0 20px 55px rgba(23,54,93,.08); }
+    .cta-panel p { color: #596579; }
+    footer { background: #edf2f7; border-top-color: #e0e7ef; }
+    .footer-brand p, .footer-bottom { color: #68768a; }
+    .footer-links { color: #42516a; }
+    .whatsapp { position: fixed; right: 18px; bottom: 18px; z-index: 40; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; max-width: calc(100vw - 36px); padding: 14px 16px; border: 1px solid #d5e5e1; border-radius: 16px; color: #17365d; background: #fff; box-shadow: 0 12px 32px rgba(23,54,93,.15); font-size: 12px; }
+    .whatsapp strong { font-size: 18px; letter-spacing: .5px; }
+    .whatsapp small { color: #657287; font-size: 10px; }
+    .whatsapp button { padding: 7px 11px; border: 0; border-radius: 8px; color: #fff; background: #0f766e; font-size: 11px; font-weight: 800; cursor: pointer; }
+    .footer-contact-label { color: #42516a; }
+    @media (max-width:700px) { .nav-links { background: #fff; border-bottom-color: #e0e7ef; } .whatsapp { right: 10px; bottom: 10px; } }
+
   </style>
 </head>
 <body>
@@ -231,7 +278,7 @@
             <a class="btn btn-gold" href="https://lofthela.com/user/register.php?ref=Payee">Create your account <span aria-hidden="true">→</span></a>
             <a class="btn btn-outline" href="#activities">Explore activities</a>
           </div>
-          <p class="hero-note">Displayed rewards vary by activity, from UGX 500 to UGX 10,000. Tasks are subject to availability, eligibility and review.</p>
+          <p class="hero-note">Displayed rewards vary by activity, from UGX 2,500 to UGX 10,000. Tasks are subject to availability, eligibility and review.</p>
         </div>
         <div class="hero-visual" aria-label="Preview of EarnQube activities and rewards">
           <div class="visual-glow"></div>
@@ -243,7 +290,7 @@
               <div class="mini-row"><div class="mini-left"><span class="mini-icon">💬</span>Moderated chat activity</div><span class="mini-amount">UGX 10,000</span></div>
               <div class="mini-row"><div class="mini-left"><span class="mini-icon">▶️</span>TikTok / YouTube videos</div><span class="mini-amount">UGX 5,000</span></div>
               <div class="mini-row"><div class="mini-left"><span class="mini-icon">📢</span>Sponsored content</div><span class="mini-amount">UGX 2,000</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">⚽</span>DLS challenges</div><span class="mini-amount">See task</span></div>
+              <div class="mini-row"><div class="mini-left"><span class="mini-icon">⚽</span>DLS challenges</div><span class="mini-amount">UGX 5,000</span></div>
               <div class="mini-row"><div class="mini-left"><span class="mini-icon">📲</span>WhatsApp promotion</div><span class="mini-amount">UGX 500</span></div>
               <div class="mini-row"><div class="mini-left"><span class="mini-icon">🛍️</span>Product advertising</div><span class="mini-amount">UGX 500</span></div>
               <div class="mini-row"><div class="mini-left"><span class="mini-icon">🧠</span>Daily trivia</div><span class="mini-amount">UGX 500</span></div>
@@ -292,42 +339,42 @@
             <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">View sponsored tasks <span>→</span></a>
           </article>
           <article class="activity-card">
-            <div class="activity-top"><span class="activity-icon">⚽</span><span class="reward-tag">See task details</span></div>
+            <div class="activity-top"><span class="activity-icon">⚽</span><span class="reward-tag">UGX 5,000</span></div>
             <h3>Dream League Soccer (DLS)</h3>
             <p>Take part in DLS skill challenges, match objectives or community competitions when available. Check the task rules and reward before participating.</p>
-            <div class="activity-meta">Reward and eligibility shown per challenge</div>
+            <div class="activity-meta">Reward per approved qualifying challenge</div>
             <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Explore DLS challenges <span>→</span></a>
           </article>
           <article class="activity-card featured">
-            <div class="activity-top"><span class="activity-icon">📲</span><span class="reward-tag">UGX 500</span></div>
+            <div class="activity-top"><span class="activity-icon">📲</span><span class="reward-tag">UGX 2,500</span></div>
             <h3>WhatsApp Status Promotion</h3>
             <p>Share an approved EarnQube or partner campaign on your WhatsApp Status. Follow the campaign instructions and submit the required proof for review.</p>
             <div class="activity-meta">Reward per approved status task</div>
             <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Join to explore <span>→</span></a>
           </article>
           <article class="activity-card">
-            <div class="activity-top"><span class="activity-icon">🛍️</span><span class="reward-tag">UGX 500</span></div>
+            <div class="activity-top"><span class="activity-icon">🛍️</span><span class="reward-tag">UGX 2,500</span></div>
             <h3>Product Advertising</h3>
             <p>Help promote selected products using the campaign images, descriptions and sharing instructions provided for each task.</p>
             <div class="activity-meta">Reward per approved promotion</div>
             <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">View opportunities <span>→</span></a>
           </article>
           <article class="activity-card">
-            <div class="activity-top"><span class="activity-icon">🧠</span><span class="reward-tag">UGX 500</span></div>
+            <div class="activity-top"><span class="activity-icon">🧠</span><span class="reward-tag">UGX 2,500</span></div>
             <h3>Daily Trivia</h3>
             <p>Answer a short set of general-knowledge questions. Follow the challenge rules shown for that round and submit your answers.</p>
             <div class="activity-meta">Reward per qualifying completion</div>
             <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Try trivia <span>→</span></a>
           </article>
           <article class="activity-card">
-            <div class="activity-top"><span class="activity-icon">➗</span><span class="reward-tag">UGX 500</span></div>
+            <div class="activity-top"><span class="activity-icon">➗</span><span class="reward-tag">UGX 2,500</span></div>
             <h3>Quick Math Challenge</h3>
             <p>Solve a short series of arithmetic questions and submit your answers for an accuracy check.</p>
             <div class="activity-meta">Reward per qualifying completion</div>
             <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Solve a challenge <span>→</span></a>
           </article>
           <article class="activity-card">
-            <div class="activity-top"><span class="activity-icon">🎨</span><span class="reward-tag">UGX 500</span></div>
+            <div class="activity-top"><span class="activity-icon">🎨</span><span class="reward-tag">UGX 2,500</span></div>
             <h3>Colour Recognition Challenge</h3>
             <p>Test your observation skills by identifying colours, matching patterns and completing quick visual rounds.</p>
             <div class="activity-meta">Reward per qualifying completion</div>
@@ -341,7 +388,7 @@
             <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Explore EarnQube <span>→</span></a>
           </article>
         </div>
-        <div class="reward-disclaimer" id="rewards">Displayed amounts are advertised task rewards, not guaranteed earnings. The chat activity displays UGX 10,000; TikTok and YouTube video tasks display UGX 5,000 each; sponsored-content tasks display UGX 2,000; and the original five activities display UGX 500 each. DLS challenge rewards are shown in the individual task. All rewards depend on availability, eligibility, task rules and successful review.</div>
+        <div class="reward-disclaimer" id="rewards">Displayed amounts are advertised task rewards, not guaranteed earnings. The chat activity displays UGX 10,000; TikTok and YouTube video tasks display UGX 5,000 each; sponsored-content tasks display UGX 2,000; and the original five activities display UGX 2,500 each. DLS challenges display UGX 5,000. All rewards depend on availability, eligibility, task rules and successful review.</div>
       </div>
     </section>
 
@@ -373,7 +420,7 @@
         </div>
         <div class="faq-list">
           <article class="faq-item"><h3>What activities are featured?</h3><p>Moderated chat, TikTok videos, YouTube videos, sponsored-content tasks, Dream League Soccer challenges, WhatsApp Status Promotion, Product Advertising, Daily Trivia, Quick Math and Colour Recognition.</p></article>
-          <article class="faq-item"><h3>How much are the displayed rewards?</h3><p>Moderated chat: UGX 10,000; TikTok and YouTube video tasks: UGX 5,000 each; sponsored-content tasks: UGX 2,000; original five activities: UGX 500 each. DLS rewards are shown per challenge. Approval conditions apply.</p></article>
+          <article class="faq-item"><h3>How much are the displayed rewards?</h3><p>Moderated chat: UGX 10,000; TikTok and YouTube video tasks: UGX 5,000 each; sponsored-content tasks: UGX 2,000; original five activities: UGX 2,500 each. DLS challenges: UGX 5,000. Approval conditions apply.</p></article>
           <article class="faq-item"><h3>Is every activity always available?</h3><p>No. Availability can depend on current campaigns and platform updates. Sign in to see which activities are currently open.</p></article>
           <article class="faq-item"><h3>Are chat and video activities safe?</h3><p>Chat activities should be moderated and kept on-platform. Never share your address, phone number, passwords, private photos or other personal details with strangers. Video tasks should not ask you to manipulate likes, views or subscriptions.</p></article>
           <article class="faq-item"><h3>When is a reward approved?</h3><p>Submissions are subject to the activity's instructions, eligibility requirements and review. Completing a task does not automatically guarantee approval.</p></article>
@@ -406,17 +453,35 @@
         <div class="footer-links">
           <a href="#activities">Activities</a><a href="#how-it-works">How it works</a><a href="#faq">FAQs</a>
           <a href="https://lofthela.com/user/login.php">Sign in</a>
-          <a href="mailto:support@earnqube.site">support@earnqube.site</a>
-          <a href="https://wa.me/256746673971?text=Hello%20EarnQube%2C%20I%20need%20assistance%20with%20my%20account." target="_blank" rel="noopener">WhatsApp support</a>
+          <a href="mailto:earnqubesite@gmail.com">earnqubesite@gmail.com</a>
+          <span class="footer-contact-label">WhatsApp: <strong>0744405402</strong> — save this number to your contacts</span>
         </div>
       </div>
-      <div class="footer-bottom"><span>© 2026 EarnQube.site. All rights reserved.</span><span>WhatsApp: +256 746 673 971</span></div>
+      <div class="footer-bottom"><span>© 2026 EarnQube.site. All rights reserved.</span><span>WhatsApp: <strong>0744405402</strong> · Save this number to your contacts</span></div>
     </div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/256746673971?text=Hello%20EarnQube%2C%20I%20need%20assistance%20with%20my%20account." target="_blank" rel="noopener" aria-label="Chat with EarnQube support">💬 <span>Chat with support</span></a>
+  <div class="whatsapp" aria-label="EarnQube WhatsApp contact"><span>WhatsApp support</span><strong id="supportPhone">0744405402</strong><button id="copyPhone" type="button">Copy number</button><small>Save this number in your contacts</small></div>
 
   <script>
+
+    const copyPhone = document.getElementById("copyPhone");
+    const supportPhone = document.getElementById("supportPhone");
+    copyPhone.addEventListener("click", async () => {
+      const number = supportPhone.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(number);
+        copyPhone.textContent = "Copied";
+      } catch (error) {
+        const range = document.createRange();
+        range.selectNodeContents(supportPhone);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        copyPhone.textContent = "Select number to copy";
+      }
+    });
+
     const menuToggle = document.getElementById("menuToggle");
     const siteMenu = document.getElementById("siteMenu");
     menuToggle.addEventListener("click", () => {
