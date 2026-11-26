@@ -2,2322 +2,397 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-  <title>EarnQube — Online Earning Opportunities in Africa</title>
-
-  <meta name="description"
-        content="EarnQube helps users explore online earning opportunities through digital tasks, surveys, videos, music, gaming, referrals and more.">
-
-  <meta name="keywords"
-        content="EarnQube, earn money online Uganda, online earning Africa, online jobs Uganda, make money online, digital tasks, EarnQube Uganda">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EarnQube | Simple Digital Activities. Clear Rewards.</title>
+  <meta name="description" content="Explore promotional activities and quick skill-based challenges on EarnQube. Eligible approved activities display a UGX 500 reward.">
+  <meta name="keywords" content="EarnQube, Uganda digital activities, WhatsApp promotion, product advertising, trivia, math challenge, colour recognition">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://earnqube.site/">
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="EarnQube — Online Earning Opportunities">
-  <meta property="og:description"
-        content="Explore digital earning opportunities with EarnQube.">
+  <meta property="og:title" content="EarnQube | Simple Digital Activities. Clear Rewards.">
+  <meta property="og:description" content="Explore five promotional and skill-based activities, each displaying a UGX 500 reward for approved completion.">
   <meta property="og:url" content="https://earnqube.site/">
   <meta property="og:site_name" content="EarnQube">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title"
-        content="EarnQube — Online Earning Opportunities">
-  <meta name="twitter:description"
-        content="Explore digital earning opportunities with EarnQube.">
-
-  <!-- Google Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "EarnQube",
-    "url": "https://earnqube.site/",
-    "description": "EarnQube helps users explore online earning opportunities through digital tasks and online activities."
-  }
-  </script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+  <meta name="theme-color" content="#090d0a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #030712;
-      --bg2: #07111f;
-      --card: rgba(15, 23, 42, .88);
-      --accent: #10b981;
-      --accent2: #34d399;
-      --text: #f8fafc;
-      --muted: #9ca3af;
-      --border: rgba(255,255,255,.08);
+      --bg: #090d0a;
+      --bg-soft: #0e1510;
+      --panel: #111a13;
+      --panel-2: #151f17;
+      --line: rgba(220, 190, 105, .17);
+      --gold: #d5b45c;
+      --gold-light: #f0d98e;
+      --green: #78936c;
+      --green-soft: rgba(120, 147, 108, .12);
+      --white: #f5f4ed;
+      --muted: #a8b0a5;
+      --muted-2: #7e887d;
+      --radius: 22px;
+      --shadow: 0 24px 70px rgba(0,0,0,.32);
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
     body {
-      font-family: Inter, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(16,185,129,.10), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(59,130,246,.08), transparent 35%),
+      margin: 0; color: var(--white); background:
+        radial-gradient(ellipse at 78% 2%, rgba(120,147,108,.13), transparent 31rem),
+        radial-gradient(ellipse at 5% 45%, rgba(213,180,92,.06), transparent 28rem),
         var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      overflow-x: hidden;
+      font-family: "DM Sans", sans-serif; line-height: 1.65; overflow-x: hidden;
     }
-
-    a {
-      color: inherit;
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px);
+      background: rgba(9,13,10,.88); border-bottom: 1px solid rgba(255,255,255,.06);
     }
-
-    .mobile-navbar {
-      position: sticky;
-      top: 0;
-      z-index: 9999;
-      height: 62px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 16px;
-      background: rgba(3,7,18,.92);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font: 800 22px Manrope, sans-serif; letter-spacing: -.8px; }
+    .brand-mark {
+      width: 39px; height: 39px; display: grid; place-items: center; border-radius: 13px;
+      color: #10140d; background: linear-gradient(145deg, var(--gold-light), #b9933d);
+      box-shadow: 0 7px 24px rgba(213,180,92,.17); font-size: 19px;
     }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -1px;
+    .brand span:last-child { color: var(--gold-light); }
+    .nav-links { display: flex; align-items: center; gap: 28px; color: #c1c7bd; font-size: 13px; font-weight: 600; }
+    .nav-links a:hover, .footer-links a:hover { color: var(--gold-light); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .btn {
+      min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      padding: 0 19px; border-radius: 12px; border: 1px solid transparent; cursor: pointer;
+      font-size: 13px; font-weight: 800; transition: transform .2s ease, background .2s ease, border-color .2s ease;
     }
-
-    .logo span {
-      color: var(--accent);
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { color: #17170f; background: linear-gradient(135deg, #f0d98e, #c6a34c); box-shadow: 0 10px 28px rgba(213,180,92,.13); }
+    .btn-outline { color: var(--white); background: rgba(255,255,255,.025); border-color: rgba(255,255,255,.14); }
+    .btn-outline:hover { border-color: var(--gold); }
+    .menu-toggle { display: none; width: 43px; height: 43px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--white); font-size: 20px; }
+    .hero { padding: 92px 0 76px; }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 65px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid var(--line);
+      border-radius: 99px; color: var(--gold-light); background: rgba(213,180,92,.06);
+      font-size: 11px; font-weight: 800; letter-spacing: 1.25px; text-transform: uppercase;
     }
-
-    .mobile-nav-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 13px rgba(213,180,92,.8); }
+    h1,h2,h3,p { margin-top: 0; }
+    h1 { max-width: 700px; margin: 22px 0 20px; font: 800 clamp(42px, 6vw, 72px)/1.06 Manrope,sans-serif; letter-spacing: -3.7px; }
+    .gold-text { color: var(--gold-light); }
+    .hero-copy { max-width: 570px; color: #b3bcb1; font-size: 16px; line-height: 1.85; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .hero-note { margin-top: 18px; color: var(--muted-2); font-size: 11px; }
+    .hero-visual { position: relative; min-height: 440px; display: grid; place-items: center; }
+    .visual-glow { position: absolute; width: 330px; height: 330px; border-radius: 50%; background: rgba(120,147,108,.14); filter: blur(55px); }
+    .earn-card {
+      position: relative; width: min(100%, 430px); padding: 28px; border: 1px solid rgba(213,180,92,.25);
+      border-radius: 28px; background: linear-gradient(150deg, rgba(25,37,27,.98), rgba(13,20,15,.98));
+      box-shadow: var(--shadow); transform: rotate(1.5deg);
     }
-
-    .nav-icon-btn,
-    .menu-toggle {
-      width: 38px;
-      height: 38px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: rgba(255,255,255,.04);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 18px;
-      cursor: pointer;
+    .card-top { display: flex; justify-content: space-between; align-items: center; gap: 15px; color: var(--muted); font-size: 12px; }
+    .status-pill { padding: 6px 10px; border-radius: 99px; color: var(--gold-light); background: rgba(213,180,92,.1); font-size: 10px; font-weight: 800; }
+    .reward-total { margin: 26px 0 7px; font: 800 43px Manrope,sans-serif; letter-spacing: -1.7px; }
+    .reward-caption { color: var(--muted); font-size: 12px; }
+    .mini-activities { display: grid; gap: 10px; margin-top: 28px; }
+    .mini-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 14px; border: 1px solid rgba(255,255,255,.07); border-radius: 14px; background: rgba(255,255,255,.025); }
+    .mini-left { display: flex; align-items: center; gap: 11px; font-size: 12px; font-weight: 700; }
+    .mini-icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: var(--green-soft); font-size: 16px; }
+    .mini-amount { color: var(--gold-light); font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .section { padding: 76px 0; }
+    .section-head { max-width: 680px; margin: 0 auto 35px; text-align: center; }
+    .section-kicker { color: var(--gold); font-size: 11px; font-weight: 800; letter-spacing: 1.7px; text-transform: uppercase; }
+    h2 { margin: 12px 0 13px; font: 800 clamp(29px,4vw,43px)/1.17 Manrope,sans-serif; letter-spacing: -1.8px; }
+    .section-head p { color: var(--muted); font-size: 14px; }
+    .activity-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 17px; }
+    .activity-card {
+      position: relative; display: flex; flex-direction: column; min-height: 300px; padding: 23px;
+      border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius);
+      background: linear-gradient(150deg, rgba(21,31,23,.96), rgba(14,21,16,.96));
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
     }
-
-    .mobile-dropdown {
-      display: none;
-      position: fixed;
-      top: 62px;
-      left: 0;
-      right: 0;
-      z-index: 9998;
-      flex-direction: column;
-      background: #07111f;
-      border-bottom: 1px solid var(--border);
-      padding: 10px;
-      box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    .activity-card:hover { transform: translateY(-5px); border-color: rgba(213,180,92,.38); box-shadow: 0 20px 45px rgba(0,0,0,.2); }
+    .activity-card.featured { border-color: rgba(213,180,92,.31); }
+    .activity-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .activity-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; background: rgba(213,180,92,.09); font-size: 23px; }
+    .reward-tag { padding: 7px 10px; border-radius: 9px; background: rgba(213,180,92,.1); color: var(--gold-light); font-size: 11px; font-weight: 800; white-space: nowrap; }
+    .activity-card h3 { margin: 20px 0 8px; font: 800 18px Manrope,sans-serif; letter-spacing: -.35px; }
+    .activity-card p { margin-bottom: 18px; color: var(--muted); font-size: 13px; line-height: 1.75; }
+    .activity-meta { margin-top: auto; padding-top: 13px; border-top: 1px solid rgba(255,255,255,.07); color: var(--muted-2); font-size: 10px; }
+    .activity-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; color: var(--gold-light); font-size: 12px; font-weight: 800; }
+    .activity-link:hover { color: white; }
+    .reward-disclaimer { max-width: 850px; margin: 22px auto 0; padding: 14px 17px; border: 1px solid rgba(213,180,92,.16); border-radius: 13px; background: rgba(213,180,92,.045); color: #b8b6a8; font-size: 11px; text-align: center; }
+    .how-section { background: linear-gradient(180deg, transparent, rgba(120,147,108,.055), transparent); }
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 17px; }
+    .step { padding: 25px; border: 1px solid rgba(255,255,255,.075); border-radius: 19px; background: rgba(17,26,19,.72); }
+    .step-number { width: 38px; height: 38px; display: grid; place-items: center; margin-bottom: 18px; border-radius: 12px; background: rgba(213,180,92,.12); color: var(--gold-light); font: 800 14px Manrope,sans-serif; }
+    .step h3 { margin-bottom: 8px; font: 800 16px Manrope,sans-serif; }
+    .step p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .notice {
+      display: grid; grid-template-columns: auto 1fr; align-items: start; gap: 16px; max-width: 900px; margin: 32px auto 0;
+      padding: 21px; border: 1px solid var(--line); border-radius: 18px; background: rgba(213,180,92,.045);
     }
-
-    .mobile-dropdown a {
-      padding: 13px;
-      text-decoration: none;
-      border-radius: 8px;
-      color: #e5e7eb;
+    .notice-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; background: rgba(213,180,92,.12); color: var(--gold-light); }
+    .notice strong { display: block; margin-bottom: 4px; color: var(--gold-light); font-size: 13px; }
+    .notice p { margin: 0; color: var(--muted); font-size: 12px; }
+    .faq-list { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; max-width: 930px; margin: 0 auto; }
+    .faq-item { padding: 20px; border: 1px solid rgba(255,255,255,.075); border-radius: 16px; background: var(--panel); }
+    .faq-item h3 { margin-bottom: 7px; font: 800 14px Manrope,sans-serif; }
+    .faq-item p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .cta-panel {
+      display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 36px;
+      border: 1px solid rgba(213,180,92,.25); border-radius: 25px;
+      background: radial-gradient(circle at 90% 10%, rgba(213,180,92,.11), transparent 32%), linear-gradient(130deg,#172219,#101711);
+      box-shadow: var(--shadow);
     }
-
-    .mobile-dropdown a:hover {
-      background: rgba(16,185,129,.1);
+    .cta-panel h2 { margin: 0 0 9px; font-size: clamp(25px,3vw,34px); }
+    .cta-panel p { margin: 0; color: var(--muted); font-size: 13px; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 10px; flex-shrink: 0; }
+    footer { margin-top: 45px; padding: 38px 0 28px; border-top: 1px solid rgba(255,255,255,.07); background: rgba(0,0,0,.14); }
+    .footer-main { display: flex; justify-content: space-between; gap: 35px; padding-bottom: 26px; }
+    .footer-brand p { max-width: 340px; margin: 13px 0 0; color: var(--muted-2); font-size: 12px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 20px; align-content: flex-start; color: #c0c7bd; font-size: 12px; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 15px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.06); color: var(--muted-2); font-size: 10px; }
+    .whatsapp {
+      position: fixed; right: 22px; bottom: 22px; z-index: 40; display: inline-flex; align-items: center; gap: 9px;
+      padding: 13px 17px; border: 1px solid rgba(213,180,92,.32); border-radius: 99px;
+      color: var(--gold-light); background: #142017; box-shadow: 0 12px 32px rgba(0,0,0,.35); font-size: 12px; font-weight: 800;
     }
-
-    .menu-btn-join {
-      background: var(--accent);
-      color: #030712 !important;
-      text-align: center;
-      font-weight: 800;
-      margin-top: 7px;
+    .whatsapp:hover { background: #1b2b1e; }
+    @media (max-width: 900px) {
+      .hero-grid { gap: 28px; grid-template-columns: 1fr  .82fr; }
+      .activity-grid { grid-template-columns: repeat(2,1fr); }
+      .nav-links { gap: 16px; }
     }
-
-    .live-ticker-container {
-      background: rgba(16,185,129,.08);
-      border-bottom: 1px solid rgba(16,185,129,.2);
-      padding: 8px 0;
-      overflow: hidden;
-      white-space: nowrap;
-      font-size: 11px;
-      color: var(--accent2);
-      font-weight: 700;
-    }
-
-    .live-ticker-track {
-      display: inline-block;
-      animation: tickerScroll 30s linear infinite;
-    }
-
-    .live-ticker-track span {
-      margin-right: 45px;
-    }
-
-    @keyframes tickerScroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
-    .activity-status-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 7px;
-      padding: 7px;
-      color: var(--accent);
-      background: rgba(16,185,129,.05);
-      border-bottom: 1px solid rgba(16,185,129,.12);
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: .5px;
-    }
-
-    .activity-status-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 12px rgba(16,185,129,.8);
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      50% {
-        opacity: .35;
-        transform: scale(.7);
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 30px, 540px); }
+      .nav { min-height: 66px; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .nav-links {
+        display: none; position: absolute; top: 66px; left: 0; right: 0; padding: 17px 20px 20px;
+        flex-direction: column; align-items: stretch; gap: 0; background: #0c130e; border-bottom: 1px solid var(--line);
       }
-    }
-
-    .mobile-container {
-      max-width: 720px;
-      margin: auto;
-      padding: 0 14px 50px;
-    }
-
-    .mobile-hero {
-      text-align: center;
-      padding: 55px 8px 35px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 11px;
-      border: 1px solid rgba(16,185,129,.25);
-      background: rgba(16,185,129,.08);
-      border-radius: 30px;
-      color: var(--accent2);
-      font-size: 10px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .dot-indicator {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    h1 {
-      font-size: clamp(34px, 9vw, 60px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 17px;
-    }
-
-    .green-text {
-      color: var(--accent);
-    }
-
-    .mobile-hero p {
-      color: var(--muted);
-      font-size: 14px;
-      max-width: 620px;
-      margin: auto;
-    }
-
-    .hero-buttons {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 9px;
-      margin-top: 22px;
-    }
-
-    .btn-primary,
-    .btn-secondary,
-    .task-action-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 11px 15px;
-      border-radius: 9px;
-      font-weight: 800;
-      font-size: 12px;
-      text-decoration: none;
-      cursor: pointer;
-      border: 0;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #030712;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent2);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,.05);
-      color: white;
-      border: 1px solid var(--border);
-    }
-
-    .mobile-section {
-      padding: 28px 0;
-    }
-
-    .section-tag {
-      color: var(--accent);
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 7px;
-    }
-
-    h2 {
-      font-size: 24px;
-      letter-spacing: -.7px;
-      margin-bottom: 15px;
-    }
-
-    .mobile-stack {
-      display: grid;
-      gap: 10px;
-    }
-
-    .mobile-card,
-    .dashboard-preview-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 15px;
-      box-shadow: 0 15px 35px rgba(0,0,0,.15);
-    }
-
-    .dashboard-preview-card {
-      background:
-        linear-gradient(135deg, rgba(16,185,129,.09), rgba(59,130,246,.05)),
-        var(--card);
-    }
-
-    .preview-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .user-info {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .user-info img {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    small {
-      color: var(--muted);
-      display: block;
-      font-size: 10px;
-    }
-
-    strong {
-      color: white;
-    }
-
-    .live-pill {
-      color: var(--accent);
-      font-size: 8px;
-      font-weight: 800;
-    }
-
-    .preview-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 15px;
-    }
-
-    .preview-stats > div {
-      background: rgba(255,255,255,.04);
-      padding: 11px;
-      border-radius: 9px;
-    }
-
-    .task-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .task-row h3,
-    .mobile-card h3 {
-      font-size: 14px;
-      margin-bottom: 3px;
-    }
-
-    .mobile-card p {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .task-action-btn {
-      background: rgba(16,185,129,.12);
-      color: var(--accent2);
-      border: 1px solid rgba(16,185,129,.25);
-      margin-top: 9px;
-      width: 100%;
-    }
-
-    .chat-tabs {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-      margin-bottom: 10px;
-    }
-
-    .partner-tab,
-    .captain-btn,
-    .match-btn {
-      background: rgba(255,255,255,.05);
-      color: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 9px;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 11px;
-    }
-
-    .partner-tab.active,
-    .captain-btn.active {
-      background: var(--accent);
-      color: #030712;
-    }
-
-    .chat-feed {
-      height: 190px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin: 10px 0;
-      padding: 5px;
-    }
-
-    .chat-message {
-      max-width: 85%;
-      padding: 8px 11px;
-      border-radius: 9px;
-      font-size: 11px;
-    }
-
-    .incoming {
-      align-self: flex-start;
-      background: rgba(255,255,255,.07);
-    }
-
-    .outgoing {
-      align-self: flex-end;
-      background: var(--accent);
-      color: #030712;
-      font-weight: 700;
-    }
-
-    .chat-input {
-      display: flex;
-      gap: 6px;
-    }
-
-    .chat-input input {
-      flex: 1;
-      min-width: 0;
-      background: rgba(255,255,255,.05);
-      color: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 10px;
-      outline: none;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    .music-button {
-      width: 100px;
-      flex-shrink: 0;
-    }
-
-    .captain-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 7px;
-      margin-bottom: 12px;
-    }
-
-    .match-console {
-      background: #020617;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px;
-      text-align: center;
-    }
-
-    .match-score {
-      font-size: 30px;
-      font-weight: 800;
-      color: var(--accent);
-      margin: 8px 0;
-    }
-
-    .match-actions {
-      display: none;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 5px;
-    }
-
-    .testimonial-name {
-      color: white;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .testimonial-location {
-      color: var(--accent);
-      font-size: 10px;
-    }
-
-    .floating-whatsapp {
-      position: fixed;
-      right: 14px;
-      bottom: 18px;
-      z-index: 99999;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 14px;
-      border-radius: 999px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 800;
-      box-shadow: 0 10px 30px rgba(0,0,0,.4);
-      animation: floatWhatsapp 2.5s ease-in-out infinite;
-    }
-
-    @keyframes floatWhatsapp {
-      50% {
-        transform: translateY(-5px);
-      }
-    }
-
-    .activity-container {
-      position: fixed;
-      left: 12px;
-      bottom: 78px;
-      z-index: 99990;
-      width: min(360px, calc(100vw - 24px));
-      pointer-events: none;
-    }
-
-    .activity-notification {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(8,15,25,.97);
-      border: 1px solid rgba(16,185,129,.35);
-      border-radius: 13px;
-      padding: 11px 13px;
-      box-shadow: 0 15px 40px rgba(0,0,0,.45);
-      animation: activityIn .45s ease forwards,
-                 activityOut .5s ease 5s forwards;
-    }
-
-    .activity-icon {
-      width: 37px;
-      height: 37px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: rgba(16,185,129,.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-
-    .activity-live {
-      color: var(--accent);
-      font-size: 8px;
-      font-weight: 800;
-      text-transform: uppercase;
-      margin-bottom: 2px;
-    }
-
-    .activity-message {
-      color: #f3f4f6;
-      font-size: 11px;
-    }
-
-    .activity-time {
-      color: #9ca3af;
-      font-size: 8px;
-      margin-top: 2px;
-    }
-
-    @keyframes activityIn {
-      from {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes activityOut {
-      from {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      to {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-    }
-
-    .mobile-footer {
-      border-top: 1px solid var(--border);
-      padding: 25px 14px 100px;
-      text-align: center;
-      color: #6b7280;
-      font-size: 10px;
-    }
-
-    @media (min-width: 600px) {
-      .hero-buttons {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .mobile-stack {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  
-    /* Refined landing-page presentation */
-    :root {
-      --bg: #070b09;
-      --bg2: #0c1510;
-      --card: rgba(17, 27, 21, .94);
-      --accent: #c9a84c;
-      --accent2: #e5c875;
-      --text: #f7f7f2;
-      --muted: #a6afa8;
-      --border: rgba(201,168,76,.16);
-    }
-    body {
-      background:
-        radial-gradient(ellipse at 50% -12%, rgba(201,168,76,.14), transparent 44%),
-        radial-gradient(circle at 100% 35%, rgba(46,91,62,.13), transparent 32%),
-        var(--bg);
-      line-height: 1.65;
-    }
-    .mobile-navbar {
-      height: 70px;
-      padding: 0 max(20px, calc((100vw - 1080px)/2));
-      background: rgba(7,11,9,.94);
-      border-bottom-color: rgba(201,168,76,.18);
-    }
-    .logo { font-size: 25px; letter-spacing: -.9px; }
-    .logo span, .green-text, .section-tag, .live-pill,
-    .testimonial-location { color: var(--accent2); }
-    .nav-icon-btn, .menu-toggle {
-      width: 42px; height: 42px; border-radius: 12px;
-      border-color: rgba(201,168,76,.22);
-      background: rgba(255,255,255,.035);
-    }
-    .mobile-dropdown { background: #0c1510; border-color: var(--border); }
-    .mobile-dropdown a:hover { background: rgba(201,168,76,.10); }
-    .menu-btn-join, .btn-primary {
-      background: linear-gradient(135deg, #e2c36d, #b28b35);
-      color: #10130d !important;
-      box-shadow: 0 8px 22px rgba(201,168,76,.16);
-    }
-    .menu-btn-join:hover, .btn-primary:hover {
-      background: linear-gradient(135deg, #f0d98e, #c39b43);
-      transform: translateY(-1px);
-    }
-    .live-ticker-container, .activity-status-bar {
-      background: rgba(201,168,76,.045);
-      border-color: rgba(201,168,76,.13);
-      color: var(--accent2);
-    }
-    .mobile-container { max-width: 1080px; padding: 0 22px 64px; }
-    .mobile-hero {
-      padding: clamp(76px, 11vw, 128px) 12px 76px;
-      max-width: 850px; margin: auto;
-    }
-    .badge {
-      border-color: rgba(201,168,76,.28);
-      background: rgba(201,168,76,.075);
-      color: var(--accent2);
-      font-size: 11px; padding: 8px 14px;
-    }
-    h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.04; letter-spacing: -2.8px;
-      margin-bottom: 22px;
-    }
-    .mobile-hero p {
-      max-width: 650px; font-size: clamp(15px, 1.7vw, 18px);
-      line-height: 1.8;
-    }
-    .hero-buttons {
-      display: flex; justify-content: center; flex-wrap: wrap;
-      gap: 12px; margin-top: 30px;
-    }
-    .hero-buttons a {
-      min-width: 190px; min-height: 50px; padding: 14px 22px;
-      border-radius: 12px; font-size: 13px;
-      transition: transform .2s ease, background .2s ease, border-color .2s ease;
-    }
-    .btn-secondary {
-      border-color: rgba(201,168,76,.26);
-      background: rgba(255,255,255,.035);
-    }
-    .btn-secondary:hover {
-      border-color: rgba(201,168,76,.55);
-      background: rgba(201,168,76,.07);
-    }
-    .mobile-section { padding: 42px 0; scroll-margin-top: 82px; }
-    .section-tag { font-size: 10px; letter-spacing: 1.5px; }
-    h2 { font-size: clamp(25px, 3vw, 32px); margin-bottom: 20px; }
-    .mobile-card, .dashboard-preview-card {
-      border-color: rgba(201,168,76,.14);
-      border-radius: 17px; padding: 20px;
-      box-shadow: 0 18px 42px rgba(0,0,0,.20);
-    }
-    .dashboard-preview-card {
-      background: linear-gradient(135deg, rgba(201,168,76,.09), rgba(26,55,37,.24)), var(--card);
-    }
-    .task-action-btn {
-      background: rgba(201,168,76,.09);
-      border-color: rgba(201,168,76,.22);
-      color: var(--accent2); border-radius: 10px;
-    }
-    .task-action-btn:hover { background: rgba(201,168,76,.16); }
-    .partner-tab.active, .captain-btn.active {
-      background: var(--accent); color: #10130d;
-    }
-    .match-score { color: var(--accent2); }
-    .floating-whatsapp { box-shadow: 0 12px 30px rgba(0,0,0,.35); }
-    .mobile-footer {
-      border-top-color: rgba(201,168,76,.15);
-      background: rgba(5,9,7,.55);
-      line-height: 1.8;
-    }
-    @media (min-width: 760px) {
-      .mobile-stack { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
-      .mobile-section { padding: 48px 0; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 3px; }
+      .nav-actions .btn-outline { display: none; }
+      .nav-actions .btn { min-height: 40px; padding: 0 13px; font-size: 11px; }
+      .hero { padding: 65px 0 48px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 25px; }
+      h1 { font-size: clamp(42px,12vw,59px); letter-spacing: -2.8px; }
+      .hero-copy { font-size: 14px; }
+      .hero-visual { min-height: 355px; }
+      .earn-card { padding: 22px; transform: none; }
+      .reward-total { font-size: 38px; }
+      .section { padding: 57px 0; }
+      .activity-grid, .steps, .faq-list { grid-template-columns: 1fr; }
+      .activity-card { min-height: auto; }
+      .cta-panel { align-items: flex-start; flex-direction: column; padding: 26px; }
+      .footer-main, .footer-bottom { flex-direction: column; }
+      .footer-links { gap: 15px; }
+      .whatsapp { right: 13px; bottom: 13px; padding: 11px 14px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
     }
-
-
-    /* Paid activity cards */
-    .paid-activity-grid { gap: 15px; }
-    .paid-activity-card {
-      display: flex; flex-direction: column; align-items: stretch;
-      min-height: 255px; gap: 9px;
-      background: linear-gradient(155deg, rgba(201,168,76,.065), rgba(17,27,21,.96) 48%);
-    }
-    .paid-activity-top {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 3px;
-    }
-    .paid-activity-icon {
-      width: 44px; height: 44px; display: grid; place-items: center;
-      border-radius: 13px; font-size: 21px;
-      background: rgba(201,168,76,.10);
-      border: 1px solid rgba(201,168,76,.17);
-    }
-    .paid-reward {
-      color: #f0d98e; font-size: 14px; font-weight: 800;
-      padding: 7px 10px; border-radius: 9px;
-      background: rgba(201,168,76,.10);
-      border: 1px solid rgba(201,168,76,.22);
-      white-space: nowrap;
-    }
-    .paid-activity-card h3 { font-size: 16px; margin: 2px 0 0; }
-    .paid-activity-card p { font-size: 12px; line-height: 1.7; flex: 1; }
-    .paid-activity-meta {
-      color: var(--accent2); font-size: 10px; font-weight: 700;
-      letter-spacing: .2px;
-    }
-    .paid-activity-disclaimer {
-      margin-top: 14px; padding: 12px 14px;
-      border: 1px solid rgba(201,168,76,.14);
-      border-radius: 11px; background: rgba(201,168,76,.045);
-      color: var(--muted); font-size: 11px; line-height: 1.65;
-    }
-    @media (min-width: 760px) {
-      .paid-activity-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    }
-
   </style>
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="EarnQube home">
+        <span class="brand-mark">E</span><span>Earn<span>Qube</span></span>
+      </a>
+      <nav class="nav-links" id="siteMenu" aria-label="Main navigation">
+        <a href="#activities">Activities</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#rewards">Rewards</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="https://lofthela.com/user/login.php">Sign in</a>
+        <a class="btn btn-gold" href="https://lofthela.com/user/register.php?ref=Payee">Join EarnQube <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
-
-<header class="mobile-navbar">
-
-  <div class="logo">
-    Earn<span>Qube</span>
-  </div>
-
-  <div class="mobile-nav-right">
-
-    <a
-      href="https://lofthela.com/user/login.php"
-      class="nav-icon-btn"
-      target="_blank"
-      rel="noopener"
-      aria-label="Member login"
-    >👤</a>
-
-    <button
-      class="menu-toggle"
-      onclick="toggleMenu()"
-      aria-label="Open menu"
-    >☰</button>
-
-  </div>
-
-</header>
-
-<!-- =========================
-     TOP TICKER
-========================= -->
-
-<div class="live-ticker-container">
-
-  <div class="live-ticker-track">
-
-    <span>🟢 EarnQube activity is being updated</span>
-    <span>⚡ New account activity</span>
-    <span>🎬 Watching tasks available</span>
-    <span>🎵 Music tasks available</span>
-    <span>🎮 Gaming tasks available</span>
-    <span>💬 Chat tasks available</span>
-
-    <span>🟢 EarnQube activity is being updated</span>
-    <span>⚡ New account activity</span>
-    <span>🎬 Watching tasks available</span>
-    <span>🎵 Music tasks available</span>
-    <span>🎮 Gaming tasks available</span>
-    <span>💬 Chat tasks available</span>
-
-  </div>
-
-</div>
-
-<!-- =========================
-     ACTIVITY STATUS
-========================= -->
-
-<div class="activity-status-bar">
-
-  <span class="activity-status-dot"></span>
-
-  LIVE PLATFORM ACTIVITY
-
-</div>
-
-<!-- =========================
-     LIVE ACTIVITY POPUPS
-========================= -->
-
-<div
-  id="activityContainer"
-  class="activity-container"
-  aria-live="polite"
-></div>
-
-<!-- =========================
-     MOBILE MENU
-========================= -->
-
-<div id="mobileMenu" class="mobile-dropdown">
-
-  <a href="#dashboard" onclick="toggleMenu()">Dashboard</a>
-
-  <a href="#interactive-chat" onclick="toggleMenu()">
-    Foreigner Chat Tasks
-  </a>
-
-  <a href="#music-tasks" onclick="toggleMenu()">
-    Music Tasks
-  </a>
-
-  <a href="#gaming-tasks" onclick="toggleMenu()">
-    Gaming Tasks
-  </a>
-
-  <a href="#paid-challenges" onclick="toggleMenu()">
-    Paid Activities
-  </a>
-
-  <a href="#how-to-earn" onclick="toggleMenu()">
-    Ways to Earn
-  </a>
-
-  <a href="#testimonials" onclick="toggleMenu()">
-    Testimonials
-  </a>
-
-  <a href="#faq" onclick="toggleMenu()">
-    FAQ
-  </a>
-
-  <a href="#support" onclick="toggleMenu()">
-    Support
-  </a>
-
-  <a
-    href="https://lofthela.com/user/register.php?ref=Payee"
-    class="menu-btn-join"
-    target="_blank"
-    rel="noopener"
-  >
-    Join Now / Register
-  </a>
-
-</div>
-
-<main class="mobile-container">
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="mobile-hero">
-
-  <div class="badge">
-
-    <span class="dot-indicator"></span>
-
-    Online earning opportunities
-
-  </div>
-
-  <h1>
-    Turn everyday actions into
-    <span class="green-text">opportunities.</span>
-  </h1>
-
-  <p>
-    Explore digital activities including chatting, watching,
-    music, gaming, surveys and referrals from your mobile device.
-  </p>
-
-  <div class="hero-buttons">
-
-    <a
-      href="https://lofthela.com/user/register.php?ref=Payee"
-      class="btn-primary"
-      target="_blank"
-      rel="noopener"
-    >
-      Create Account & Activate
-    </a>
-
-    <a
-      href="https://lofthela.com/user/login.php"
-      class="btn-secondary"
-      target="_blank"
-      rel="noopener"
-    >
-      Member Login
-    </a>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     DASHBOARD
-========================= -->
-
-<section class="mobile-section" id="dashboard">
-
-  <div class="section-tag">
-    PLATFORM DASHBOARD PREVIEW
-  </div>
-
-  <h2>Your Account Overview</h2>
-
-  <div class="dashboard-preview-card">
-
-    <div class="preview-header">
-
-      <div class="user-info">
-
-        <img
-          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100"
-          alt="EarnQube account preview"
-        >
-
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
         <div>
-
-          <small>Account Balance Preview</small>
-
-          <strong>
-            $520.25
-          </strong>
-
+          <div class="eyebrow"><span class="eyebrow-dot"></span> DIGITAL ACTIVITIES • UGX REWARDS</div>
+          <h1>Small tasks.<br><span class="gold-text">Clear rewards.</span></h1>
+          <p class="hero-copy">Discover simple promotional activities and quick skill-based challenges in one place. Share a campaign, promote a selected product, answer trivia, solve maths questions or test your colour recognition.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://lofthela.com/user/register.php?ref=Payee">Create your account <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline" href="#activities">Explore activities</a>
+          </div>
+          <p class="hero-note">Each of the five featured activities displays a UGX 500 reward for an approved qualifying completion. Availability and review rules apply.</p>
         </div>
-
+        <div class="hero-visual" aria-label="Preview of EarnQube activities and rewards">
+          <div class="visual-glow"></div>
+          <div class="earn-card">
+            <div class="card-top"><span>EarnQube activity board</span><span class="status-pill">5 ACTIVITY TYPES</span></div>
+            <div class="reward-total">UGX 500</div>
+            <div class="reward-caption">Displayed reward per approved qualifying activity</div>
+            <div class="mini-activities">
+              <div class="mini-row"><div class="mini-left"><span class="mini-icon">📲</span>WhatsApp promotion</div><span class="mini-amount">UGX 500</span></div>
+              <div class="mini-row"><div class="mini-left"><span class="mini-icon">🛍️</span>Product advertising</div><span class="mini-amount">UGX 500</span></div>
+              <div class="mini-row"><div class="mini-left"><span class="mini-icon">🧠</span>Daily trivia</div><span class="mini-amount">UGX 500</span></div>
+              <div class="mini-row"><div class="mini-left"><span class="mini-icon">➗</span>Quick math</div><span class="mini-amount">UGX 500</span></div>
+              <div class="mini-row"><div class="mini-left"><span class="mini-icon">🎨</span>Colour challenge</div><span class="mini-amount">UGX 500</span></div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <span class="live-pill">
-        TASKS AVAILABLE
-      </span>
+    <section class="section" id="activities">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Explore the activities</div>
+          <h2>Five ways to take part</h2>
+          <p>Choose an activity that suits you. Read its instructions in your member account and complete the task as described.</p>
+        </div>
+        <div class="activity-grid">
+          <article class="activity-card featured">
+            <div class="activity-top"><span class="activity-icon">📲</span><span class="reward-tag">UGX 500</span></div>
+            <h3>WhatsApp Status Promotion</h3>
+            <p>Share an approved EarnQube or partner campaign on your WhatsApp Status. Follow the campaign instructions and submit the required proof for review.</p>
+            <div class="activity-meta">Reward per approved status task</div>
+            <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Join to explore <span>→</span></a>
+          </article>
+          <article class="activity-card">
+            <div class="activity-top"><span class="activity-icon">🛍️</span><span class="reward-tag">UGX 500</span></div>
+            <h3>Product Advertising</h3>
+            <p>Help promote selected products using the campaign images, descriptions and sharing instructions provided for each task.</p>
+            <div class="activity-meta">Reward per approved promotion</div>
+            <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">View opportunities <span>→</span></a>
+          </article>
+          <article class="activity-card">
+            <div class="activity-top"><span class="activity-icon">🧠</span><span class="reward-tag">UGX 500</span></div>
+            <h3>Daily Trivia</h3>
+            <p>Answer a short set of general-knowledge questions. Follow the challenge rules shown for that round and submit your answers.</p>
+            <div class="activity-meta">Reward per qualifying completion</div>
+            <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Try trivia <span>→</span></a>
+          </article>
+          <article class="activity-card">
+            <div class="activity-top"><span class="activity-icon">➗</span><span class="reward-tag">UGX 500</span></div>
+            <h3>Quick Math Challenge</h3>
+            <p>Solve a short series of arithmetic questions and submit your answers for an accuracy check.</p>
+            <div class="activity-meta">Reward per qualifying completion</div>
+            <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Solve a challenge <span>→</span></a>
+          </article>
+          <article class="activity-card">
+            <div class="activity-top"><span class="activity-icon">🎨</span><span class="reward-tag">UGX 500</span></div>
+            <h3>Colour Recognition Challenge</h3>
+            <p>Test your observation skills by identifying colours, matching patterns and completing quick visual rounds.</p>
+            <div class="activity-meta">Reward per qualifying completion</div>
+            <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Play colour challenge <span>→</span></a>
+          </article>
+          <article class="activity-card">
+            <div class="activity-top"><span class="activity-icon">✨</span><span class="reward-tag">Explore</span></div>
+            <h3>More opportunities</h3>
+            <p>Check your member area for campaign updates, new task instructions and activities that may become available.</p>
+            <div class="activity-meta">Availability may change</div>
+            <a class="activity-link" href="https://lofthela.com/user/register.php?ref=Payee">Explore EarnQube <span>→</span></a>
+          </article>
+        </div>
+        <div class="reward-disclaimer" id="rewards">The UGX 500 amounts are displayed rewards, not a guarantee of earnings. Rewards are subject to task availability, campaign instructions, eligibility and successful review. Always check the exact task terms in your member account.</div>
+      </div>
+    </section>
 
+    <section class="section how-section" id="how-it-works">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">A simple process</div>
+          <h2>How EarnQube works</h2>
+          <p>Start with your account, follow the instructions and let the task review process confirm qualifying submissions.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-number">01</div><h3>Create an account</h3><p>Use the registration link to open your EarnQube member account. Keep your sign-in details secure.</p></article>
+          <article class="step"><div class="step-number">02</div><h3>Choose an activity</h3><p>Explore the available activities in your member area. Read the requirements, reward details and submission instructions first.</p></article>
+          <article class="step"><div class="step-number">03</div><h3>Complete and submit</h3><p>Complete the task as instructed and provide any required answers or proof. A reward is subject to successful review.</p></article>
+        </div>
+        <div class="notice">
+          <div class="notice-icon">ⓘ</div>
+          <div><strong>Know the task conditions</strong><p>Not every activity is available at all times. Promotional tasks may have specific campaign periods and proof requirements; quiz and challenge tasks may require correct or qualifying answers. Check your member account for the current rules before you begin.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Helpful information</div>
+          <h2>Frequently asked questions</h2>
+          <p>Important details to understand before joining and participating.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item"><h3>What activities are featured?</h3><p>WhatsApp Status Promotion, Product Advertising, Daily Trivia, Quick Math Challenge and Colour Recognition Challenge.</p></article>
+          <article class="faq-item"><h3>How much is the displayed reward?</h3><p>Each featured activity displays UGX 500 for an approved qualifying completion. Check the individual task for its exact conditions.</p></article>
+          <article class="faq-item"><h3>Is every activity always available?</h3><p>No. Availability can depend on current campaigns and platform updates. Sign in to see which activities are currently open.</p></article>
+          <article class="faq-item"><h3>When is a reward approved?</h3><p>Submissions are subject to the activity's instructions, eligibility requirements and review. Completing a task does not automatically guarantee approval.</p></article>
+          <article class="faq-item"><h3>Where do I access the activities?</h3><p>Create an account or sign in through the member portal, then check the available activities and instructions in your account.</p></article>
+          <article class="faq-item"><h3>How can I get help?</h3><p>Contact the EarnQube support team through WhatsApp or email using the details at the bottom of this page.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="cta-panel">
+          <div><div class="section-kicker">Your next step</div><h2>Ready to explore EarnQube?</h2><p>Create your account and check the activities currently available to you.</p></div>
+          <div class="cta-actions">
+            <a class="btn btn-gold" href="https://lofthela.com/user/register.php?ref=Payee">Create account <span>→</span></a>
+            <a class="btn btn-outline" href="https://lofthela.com/user/login.php">Member sign in</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#home"><span class="brand-mark">E</span><span>Earn<span>Qube</span></span></a>
+          <p>Simple promotional activities and skill-based challenges, brought together in one member experience.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#activities">Activities</a><a href="#how-it-works">How it works</a><a href="#faq">FAQs</a>
+          <a href="https://lofthela.com/user/login.php">Sign in</a>
+          <a href="mailto:support@earnqube.site">support@earnqube.site</a>
+          <a href="https://wa.me/256746673971?text=Hello%20EarnQube%2C%20I%20need%20assistance%20with%20my%20account." target="_blank" rel="noopener">WhatsApp support</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 EarnQube.site. All rights reserved.</span><span>WhatsApp: +256 746 673 971</span></div>
     </div>
-
-    <div class="preview-stats">
-
-      <div>
-        <small>Available Tasks</small>
-        <strong class="green-text">50,000+</strong>
-      </div>
-
-      <div>
-        <small>Pending Activity</small>
-        <strong class="green-text">$45.00</strong>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     CHAT TASK
-========================= -->
-
-<section class="mobile-section" id="interactive-chat">
-
-  <div class="section-tag">
-    CHAT TASK
-  </div>
-
-  <h2>Chat with Foreign Partners</h2>
-
-  <p style="color:var(--muted);font-size:12px;margin-bottom:12px;">
-    Complete a simulated chat activity and explore how the task interface works.
-  </p>
-
-  <div class="chat-tabs">
-
-    <button
-      class="partner-tab active"
-      onclick="switchPartner('Jessica','24 (New York)',0)"
-      id="tab-0"
-    >
-      Jessica
-    </button>
-
-    <button
-      class="partner-tab"
-      onclick="switchPartner('Lucas','27 (London)',1)"
-      id="tab-1"
-    >
-      Lucas
-    </button>
-
-    <button
-      class="partner-tab"
-      onclick="switchPartner('Sophia','22 (Sydney)',2)"
-      id="tab-2"
-    >
-      Sophia
-    </button>
-
-  </div>
-
-  <div class="mobile-card">
-
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-
-      <div>
-
-        <strong id="partnerName">
-          Jessica, 24 (New York)
-        </strong>
-
-        <small>
-          Online partner
-        </small>
-
-      </div>
-
-      <span class="green-text" style="font-size:10px;">
-        <span id="msgCount">0</span>/5
-      </span>
-
-    </div>
-
-    <div id="chatFeed" class="chat-feed">
-
-      <div class="chat-message incoming">
-        Hi there! How is your day going? 😊
-      </div>
-
-    </div>
-
-    <div id="chatInputArea" class="chat-input">
-
-      <input
-        id="chatInput"
-        type="text"
-        placeholder="Type your reply..."
-      >
-
-      <button
-        class="btn-primary"
-        onclick="sendChatMessage()"
-      >
-        Send
-      </button>
-
-    </div>
-
-    <div
-      id="claimBox"
-      class="hidden"
-      style="text-align:center;margin-top:12px;"
-    >
-
-      <h3 style="margin-bottom:5px;">
-        Task Completed
-      </h3>
-
-      <p>
-        You completed the simulated chat activity.
-      </p>
-
-      <a
-        href="https://lofthela.com/user/register.php?ref=Payee"
-        class="btn-primary"
-        target="_blank"
-        rel="noopener"
-        style="width:100%;margin-top:10px;"
-      >
-        Create Account
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     MUSIC
-========================= -->
-
-<section class="mobile-section" id="music-tasks">
-
-  <div class="section-tag">
-    MUSIC TASKS
-  </div>
-
-  <h2>Music Streaming Activities</h2>
-
-  <p style="color:var(--muted);font-size:12px;margin-bottom:12px;">
-    Try the 40-second interactive audio demonstrations below.
-  </p>
-
-  <div class="mobile-stack">
-
-    <div class="mobile-card task-row">
-
-      <div>
-        <h3>Ugandan Music</h3>
-        <small>40-second demo</small>
-      </div>
-
-      <button
-        class="btn-primary music-button"
-        onclick="playSong('Ugandan Music')"
-      >
-        ▶ Play
-      </button>
-
-    </div>
-
-    <div class="mobile-card task-row">
-
-      <div>
-        <h3>Afrobeats</h3>
-        <small>40-second demo</small>
-      </div>
-
-      <button
-        class="btn-primary music-button"
-        onclick="playSong('Afrobeats')"
-      >
-        ▶ Play
-      </button>
-
-    </div>
-
-    <div class="mobile-card task-row">
-
-      <div>
-        <h3>International Pop</h3>
-        <small>40-second demo</small>
-      </div>
-
-      <button
-        class="btn-primary music-button"
-        onclick="playSong('International Pop')"
-      >
-        ▶ Play
-      </button>
-
-    </div>
-
-  </div>
-
-  <div
-    id="songTimerDisplay"
-    class="green-text"
-    style="text-align:center;font-size:12px;margin-top:12px;font-weight:700;"
-  ></div>
-
-</section>
-
-<!-- =========================
-     GAMING
-========================= -->
-
-<section class="mobile-section" id="gaming-tasks">
-
-  <div class="section-tag">
-    GAMING TASK
-  </div>
-
-  <h2>Interactive Football Challenge</h2>
-
-  <p style="color:var(--muted);font-size:12px;margin-bottom:12px;">
-    Choose a captain and play a short interactive football simulation.
-  </p>
-
-  <div class="mobile-card">
-
-    <h3 style="margin-bottom:10px;">
-      Choose Your Captain
-    </h3>
-
-    <div class="captain-grid">
-
-      <button
-        class="captain-btn active"
-        id="cap-0"
-        onclick="selectCaptain('Mbappe',0)"
-      >
-        ⭐ Mbappé
-      </button>
-
-      <button
-        class="captain-btn"
-        id="cap-1"
-        onclick="selectCaptain('Bellingham',1)"
-      >
-        ⭐ Bellingham
-      </button>
-
-      <button
-        class="captain-btn"
-        id="cap-2"
-        onclick="selectCaptain('Vinicius',2)"
-      >
-        ⭐ Vinícius
-      </button>
-
-      <button
-        class="captain-btn"
-        id="cap-3"
-        onclick="selectCaptain('Haaland',3)"
-      >
-        ⭐ Haaland
-      </button>
-
-    </div>
-
-    <p style="margin-bottom:10px;">
-      Selected Captain:
-      <strong id="selectedCaptain">
-        Mbappe
-      </strong>
-    </p>
-
-    <div class="match-console">
-
-      <div style="display:flex;justify-content:space-between;font-size:10px;">
-        <strong>YOUR XI</strong>
-        <strong id="matchTimer">02:00</strong>
-        <strong>RIVAL FC</strong>
-      </div>
-
-      <div class="match-score">
-
-        <span id="userScore">0</span>
-        -
-        <span id="aiScore">0</span>
-
-      </div>
-
-      <p id="matchStatus" style="font-size:11px;color:var(--muted);margin-bottom:12px;">
-        Ready to start.
-      </p>
-
-      <button
-        id="startMatchButton"
-        class="btn-primary"
-        style="width:100%;"
-        onclick="startMatch()"
-      >
-        ▶ Start Match
-      </button>
-
-      <div
-        id="matchActions"
-        class="match-actions"
-      >
-
-        <button
-          class="match-btn"
-          onclick="matchAction('attack')"
-        >
-          ⚡ Attack
-        </button>
-
-        <button
-          class="match-btn"
-          onclick="matchAction('pass')"
-        >
-          🎯 Pass
-        </button>
-
-        <button
-          class="match-btn"
-          onclick="matchAction('defend')"
-        >
-          🛡️ Defend
-        </button>
-
-      </div>
-
-      <div
-        id="matchResult"
-        class="hidden"
-        style="margin-top:12px;"
-      >
-
-        <strong class="green-text">
-          Match completed!
-        </strong>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PAID ACTIVITIES & CHALLENGES
-========================= -->
-
-<section class="mobile-section" id="paid-challenges">
-
-  <div class="section-tag">PAID ACTIVITIES</div>
-  <h2>More ways to earn with your skills</h2>
-  <p style="color:var(--muted);font-size:13px;max-width:700px;margin:-8px 0 18px;">
-    Take part in simple promotional activities and short skill-based challenges.
-    Each listed activity shows its advertised reward for an approved completion.
-  </p>
-
-  <div class="mobile-stack paid-activity-grid">
-
-    <article class="mobile-card paid-activity-card">
-      <div class="paid-activity-top">
-        <span class="paid-activity-icon">📲</span>
-        <span class="paid-reward">UGX 500</span>
-      </div>
-      <h3>WhatsApp Status Promotion</h3>
-      <p>Share an approved EarnQube or partner campaign on your WhatsApp Status and submit the required proof for review.</p>
-      <div class="paid-activity-meta">Reward per approved status task</div>
-      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">Join to explore</a>
-    </article>
-
-    <article class="mobile-card paid-activity-card">
-      <div class="paid-activity-top">
-        <span class="paid-activity-icon">🛍️</span>
-        <span class="paid-reward">UGX 500</span>
-      </div>
-      <h3>Product Advertising</h3>
-      <p>Help promote selected products using campaign images, descriptions and sharing instructions provided for each task.</p>
-      <div class="paid-activity-meta">Reward per approved promotion</div>
-      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">View opportunities</a>
-    </article>
-
-    <article class="mobile-card paid-activity-card">
-      <div class="paid-activity-top">
-        <span class="paid-activity-icon">🧠</span>
-        <span class="paid-reward">UGX 500</span>
-      </div>
-      <h3>Daily Trivia</h3>
-      <p>Answer a short set of general-knowledge questions. Complete the challenge according to its displayed rules.</p>
-      <div class="paid-activity-meta">Reward per qualifying completion</div>
-      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">Try trivia</a>
-    </article>
-
-    <article class="mobile-card paid-activity-card">
-      <div class="paid-activity-top">
-        <span class="paid-activity-icon">➗</span>
-        <span class="paid-reward">UGX 500</span>
-      </div>
-      <h3>Quick Math Challenge</h3>
-      <p>Solve a short series of arithmetic questions and submit your answers for an accuracy check.</p>
-      <div class="paid-activity-meta">Reward per qualifying completion</div>
-      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">Solve a challenge</a>
-    </article>
-
-    <article class="mobile-card paid-activity-card">
-      <div class="paid-activity-top">
-        <span class="paid-activity-icon">🎨</span>
-        <span class="paid-reward">UGX 500</span>
-      </div>
-      <h3>Colour Recognition Challenge</h3>
-      <p>Test your observation skills by identifying colours, matching patterns and completing quick visual rounds.</p>
-      <div class="paid-activity-meta">Reward per qualifying completion</div>
-      <a href="https://lofthela.com/user/register.php?ref=Payee" class="task-action-btn" target="_blank" rel="noopener">Play colour challenge</a>
-    </article>
-
-  </div>
-
-  <p class="paid-activity-disclaimer">
-    Rewards are subject to task availability, campaign instructions and successful review.
-    Check the task details in your member account before participating.
-  </p>
-
-</section>
-
-<!-- =========================
-     WAYS TO EARN
-========================= -->
-
-<section class="mobile-section" id="how-to-earn">
-
-  <div class="section-tag">
-    WAYS TO EARN
-  </div>
-
-  <h2>Explore Digital Activities</h2>
-
-  <div class="mobile-stack">
-
-    <div class="mobile-card">
-
-      <h3>🎬 Watch Videos</h3>
-
-      <p>
-        Explore video and promotional content activities.
-      </p>
-
-      <a
-        href="https://lofthela.com/user/register.php?ref=Payee"
-        class="task-action-btn"
-        target="_blank"
-        rel="noopener"
-      >
-        Start Activity
-      </a>
-
-    </div>
-
-    <div class="mobile-card">
-
-      <h3>📊 Surveys & Offers</h3>
-
-      <p>
-        Explore available surveys and digital offers.
-      </p>
-
-      <a
-        href="https://lofthela.com/user/register.php?ref=Payee"
-        class="task-action-btn"
-        target="_blank"
-        rel="noopener"
-      >
-        Explore Surveys
-      </a>
-
-    </div>
-
-    <div class="mobile-card">
-
-      <h3>👥 Referral Program</h3>
-
-      <p>
-        Invite people using your referral link.
-      </p>
-
-      <a
-        href="https://lofthela.com/user/register.php?ref=Payee"
-        class="task-action-btn"
-        target="_blank"
-        rel="noopener"
-      >
-        Get Started
-      </a>
-
-    </div>
-
-    <div class="mobile-card">
-
-      <h3>📱 Mobile Activities</h3>
-
-      <p>
-        Explore additional activities from your member dashboard.
-      </p>
-
-      <a
-        href="https://lofthela.com/user/register.php?ref=Payee"
-        class="task-action-btn"
-        target="_blank"
-        rel="noopener"
-      >
-        Open Dashboard
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     TESTIMONIALS
-========================= -->
-
-<section class="mobile-section" id="testimonials">
-
-  <div class="section-tag">
-    TESTIMONIALS
-  </div>
-
-  <h2>What users are saying</h2>
-
-  <div class="mobile-stack">
-
-    <div class="mobile-card">
-
-      <div class="testimonial-name">
-        Ronald M.
-      </div>
-
-      <div class="testimonial-location">
-        Kampala, Uganda
-      </div>
-
-      <p style="margin-top:8px;">
-        "The mobile interface is easy to navigate and the different
-        activity options make the platform interesting."
-      </p>
-
-    </div>
-
-    <div class="mobile-card">
-
-      <div class="testimonial-name">
-        Jessica L.
-      </div>
-
-      <div class="testimonial-location">
-        New York, USA
-      </div>
-
-      <p style="margin-top:8px;">
-        "I like having different digital activities available in one place."
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     FAQ
-========================= -->
-
-<section class="mobile-section" id="faq">
-
-  <div class="section-tag">
-    FAQ
-  </div>
-
-  <h2>Quick Answers</h2>
-
-  <div class="mobile-stack">
-
-    <div class="mobile-card">
-
-      <h3>
-        Is registration free?
-      </h3>
-
-      <p>
-        Account registration is available through the member registration
-        page linked from EarnQube.
-      </p>
-
-    </div>
-
-    <div class="mobile-card">
-
-      <h3>
-        How do I access activities?
-      </h3>
-
-      <p>
-        Create or access your member account and follow the available
-        activities in your dashboard.
-      </p>
-
-    </div>
-
-    <div class="mobile-card">
-
-      <h3>
-        How do withdrawals work?
-      </h3>
-
-      <p>
-        Withdrawal availability and processing depend on the connected
-        member platform and its applicable terms.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================
-     SUPPORT
-========================= -->
-
-<section class="mobile-section" id="support">
-
-  <div class="section-tag">
-    SUPPORT & CONTACT
-  </div>
-
-  <h2>Get in touch</h2>
-
-  <div class="mobile-card">
-
-    <p style="margin-bottom:14px;">
-      Need assistance with your account or accessing activities?
-      Contact EarnQube support.
-    </p>
-
-    <a
-      href="https://wa.me/256746673971?text=Hello%20EarnQube,%20I%20need%20assistance%20with%20my%20account."
-      class="btn-primary"
-      target="_blank"
-      rel="noopener"
-      style="width:100%;margin-bottom:8px;"
-    >
-      💬 WhatsApp Support
-    </a>
-
-    <a
-      href="mailto:support@earnqube.site"
-      class="btn-secondary"
-      style="width:100%;"
-    >
-      ✉️ support@earnqube.site
-    </a>
-
-  </div>
-
-</section>
-
-</main>
-
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
-
-<a
-  href="https://wa.me/256746673971?text=Hello%20EarnQube,%20I%20need%20assistance%20with%20my%20account."
-  class="floating-whatsapp"
-  target="_blank"
-  rel="noopener"
-  aria-label="Chat with EarnQube on WhatsApp"
->
-  💬 Chat with us
-</a>
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="mobile-footer">
-
-  <p>
-    © 2026 EarnQube.site. All Rights Reserved.
-  </p>
-
-  <p style="margin-top:6px;">
-    WhatsApp: +256 746 673 971
-  </p>
-
-  <p style="margin-top:4px;">
-    Email: support@earnqube.site
-  </p>
-
-</footer>
-
-<script>
-
-/* ==========================================
-   MOBILE MENU
-========================================== */
-
-function toggleMenu() {
-
-  const menu = document.getElementById("mobileMenu");
-
-  menu.style.display =
-    menu.style.display === "flex"
-      ? "none"
-      : "flex";
-
-}
-
-
-/* ==========================================
-   LIVE ACTIVITY REAL
-========================================== */
-
-/*
-  IMPORTANT:
-  These are DEMONSTRATION notifications.
-  They are not connected to real transactions.
-*/
-
-const activities = [
-
-  {
-    icon: "💸",
-    message: "<strong>Sarah K.</strong> just withdrew <strong>UGX 50,000</strong>",
-    time: "Live activity"
-  },
-
-  {
-    icon: "⚡",
-    message: "<strong>David M.</strong> just activated their account",
-    time: "Live activity"
-  },
-
-  {
-    icon: "🎬",
-    message: "<strong>Kevin O.</strong> just completed a watching activity",
-    time: "Live activity"
-  },
-
-  {
-    icon: "💬",
-    message: "<strong>Brenda A.</strong> just completed a chat activity",
-    time: "Live activity"
-  },
-
-  {
-    icon: "🎵",
-    message: "<strong>Ronald P.</strong> just completed a music activity",
-    time: "Live activity"
-  },
-
-  {
-    icon: "🎮",
-    message: "<strong>Michael T.</strong> just completed a gaming activity",
-    time: "Live activity"
-  },
-
-  {
-    icon: "💸",
-    message: "<strong>James W.</strong> just withdrew <strong>UGX 85,000</strong>",
-    time: "Live activity"
-  },
-
-  {
-    icon: "⚡",
-    message: "<strong>Aisha N.</strong> just activated their account",
-    time: "Live activity"
-  },
-
-  {
-    icon: "🎬",
-    message: "<strong>Daniel R.</strong> just completed watching a video",
-    time: "Live activity"
-  }
-
-];
-
-let activityIndex = 0;
-
-function showActivity() {
-
-  const container =
-    document.getElementById("activityContainer");
-
-  if (!container) return;
-
-  container.innerHTML = "";
-
-  const activity =
-    activities[activityIndex];
-
-  const notification =
-    document.createElement("div");
-
-  notification.className =
-    "activity-notification";
-
-  notification.innerHTML = `
-
-    <div class="activity-icon">
-      ${activity.icon}
-    </div>
-
-    <div>
-
-      <div class="activity-live">
-        ● Platform activity
-      </div>
-
-      <div class="activity-message">
-        ${activity.message}
-      </div>
-
-      <div class="activity-time">
-        ${activity.time}
-      </div>
-
-    </div>
-
-  `;
-
-  container.appendChild(notification);
-
-  activityIndex++;
-
-  if (activityIndex >= activities.length) {
-    activityIndex = 0;
-  }
-
-  setTimeout(() => {
-
-    if (notification.parentNode) {
-      notification.remove();
-    }
-
-  }, 5600);
-
-}
-
-window.addEventListener("load", () => {
-
-  setTimeout(showActivity, 2500);
-
-  setInterval(showActivity, 8500);
-
-});
-
-
-/* ==========================================
-   CHAT TASK
-========================================== */
-
-let messageCount = 0;
-
-let currentPartner = "Jessica";
-
-const greetings = {
-
-  Jessica:
-    "Hi there! How is your day going? 😊",
-
-  Lucas:
-    "Hello! Ready to complete today's chat activity?",
-
-  Sophia:
-    "Hey! Good to connect with you. How are your activities going?"
-
-};
-
-const replies = {
-
-  Jessica: [
-    "That sounds interesting!",
-    "What other online activities do you enjoy?",
-    "That's great to hear.",
-    "We are almost finished.",
-    "Chat activity completed."
-  ],
-
-  Lucas: [
-    "Music and digital activities are interesting.",
-    "Exactly!",
-    "Have you tried the other activities?",
-    "Almost finished.",
-    "Chat activity completed."
-  ],
-
-  Sophia: [
-    "That's great!",
-    "The mobile interface is easy to use.",
-    "I enjoy digital activities too.",
-    "One more message.",
-    "Chat activity completed."
-  ]
-
-};
-
-function switchPartner(name, info, index) {
-
-  currentPartner = name;
-
-  messageCount = 0;
-
-  document.getElementById("msgCount").innerText = "0";
-
-  document.getElementById("partnerName").innerText =
-    `${name}, ${info}`;
-
-  for (let i = 0; i < 3; i++) {
-
-    const tab =
-      document.getElementById("tab-" + i);
-
-    tab.classList.toggle(
-      "active",
-      i === index
-    );
-
-  }
-
-  const feed =
-    document.getElementById("chatFeed");
-
-  feed.innerHTML = `
-
-    <div class="chat-message incoming">
-      ${greetings[name]}
-    </div>
-
-  `;
-
-  document.getElementById("chatInputArea")
-    .classList.remove("hidden");
-
-  document.getElementById("claimBox")
-    .classList.add("hidden");
-
-}
-
-function sendChatMessage() {
-
-  const input =
-    document.getElementById("chatInput");
-
-  const text =
-    input.value.trim();
-
-  if (!text || messageCount >= 5) {
-    return;
-  }
-
-  const feed =
-    document.getElementById("chatFeed");
-
-  const userMessage =
-    document.createElement("div");
-
-  userMessage.className =
-    "chat-message outgoing";
-
-  userMessage.innerText =
-    text;
-
-  feed.appendChild(userMessage);
-
-  input.value = "";
-
-  messageCount++;
-
-  document.getElementById("msgCount")
-    .innerText = messageCount;
-
-  setTimeout(() => {
-
-    const reply =
-      document.createElement("div");
-
-    reply.className =
-      "chat-message incoming";
-
-    reply.innerText =
-      replies[currentPartner][messageCount - 1];
-
-    feed.appendChild(reply);
-
-    feed.scrollTop =
-      feed.scrollHeight;
-
-    if (messageCount >= 5) {
-
-      document.getElementById("chatInputArea")
-        .classList.add("hidden");
-
-      document.getElementById("claimBox")
-        .classList.remove("hidden");
-
-    }
-
-  }, 600);
-
-}
-
-
-/* ==========================================
-   MUSIC DEMO
-========================================== */
-
-let musicTimer = null;
-
-function playSong(songName) {
-
-  if (musicTimer) {
-    clearInterval(musicTimer);
-  }
-
-  let seconds = 40;
-
-  const display =
-    document.getElementById("songTimerDisplay");
-
-  display.innerText =
-    `🎵 Playing "${songName}" — 00:40`;
-
-  try {
-
-    const AudioContext =
-      window.AudioContext ||
-      window.webkitAudioContext;
-
-    const audio =
-      new AudioContext();
-
-    const oscillator =
-      audio.createOscillator();
-
-    const gain =
-      audio.createGain();
-
-    oscillator.frequency.value = 440;
-
-    gain.gain.value = .03;
-
-    oscillator.connect(gain);
-
-    gain.connect(audio.destination);
-
-    oscillator.start();
-
-    musicTimer = setInterval(() => {
-
-      seconds--;
-
-      display.innerText =
-        `🎵 Playing "${songName}" — 00:${String(seconds).padStart(2,"0")}`;
-
-      if (seconds <= 0) {
-
-        clearInterval(musicTimer);
-
-        try {
-          oscillator.stop();
-        } catch(e) {}
-
-        display.innerText =
-          `✅ 40-second "${songName}" demonstration completed.`;
-
-      }
-
-    }, 1000);
-
-  } catch(e) {
-
-    display.innerText =
-      `▶ "${songName}" demonstration started.`;
-
-  }
-
-}
-
-
-/* ==========================================
-   CAPTAIN SELECTION
-========================================== */
-
-let captain = "Mbappe";
-
-function selectCaptain(name, index) {
-
-  captain = name;
-
-  document.getElementById("selectedCaptain")
-    .innerText = name;
-
-  for (let i = 0; i < 4; i++) {
-
-    document
-      .getElementById("cap-" + i)
-      .classList.toggle(
-        "active",
-        i === index
-      );
-
-  }
-
-}
-
-
-/* ==========================================
-   FOOTBALL MATCH
-========================================== */
-
-let matchTimer = null;
-
-let secondsLeft = 120;
-
-let userScore = 0;
-
-let aiScore = 0;
-
-function startMatch() {
-
-  document.getElementById("startMatchButton")
-    .style.display = "none";
-
-  document.getElementById("matchActions")
-    .style.display = "grid";
-
-  secondsLeft = 120;
-
-  userScore = 0;
-
-  aiScore = 0;
-
-  document.getElementById("userScore")
-    .innerText = "0";
-
-  document.getElementById("aiScore")
-    .innerText = "0";
-
-  document.getElementById("matchStatus")
-    .innerText =
-    `${captain} has kicked off the match!`;
-
-  clearInterval(matchTimer);
-
-  matchTimer =
-    setInterval(() => {
-
-      secondsLeft--;
-
-      const minutes =
-        Math.floor(secondsLeft / 60);
-
-      const seconds =
-        secondsLeft % 60;
-
-      document.getElementById("matchTimer")
-        .innerText =
-        `0${minutes}:${String(seconds).padStart(2,"0")}`;
-
-      if (
-        secondsLeft % 30 === 0 &&
-        secondsLeft > 0
-      ) {
-
-        aiScore++;
-
-        document.getElementById("aiScore")
-          .innerText = aiScore;
-
-        document.getElementById("matchStatus")
-          .innerText =
-          "⚠️ Rival FC launched a counter attack!";
-
-      }
-
-      if (secondsLeft <= 0) {
-
-        clearInterval(matchTimer);
-
-        finishMatch();
-
-      }
-
-    }, 1000);
-
-}
-
-
-function matchAction(type) {
-
-  if (secondsLeft <= 0) return;
-
-  const messages = {
-
-    attack:
-      `⚡ ${captain} makes a dangerous attack!`,
-
-    pass:
-      `🎯 ${captain} delivers a brilliant pass!`,
-
-    defend:
-      `🛡️ ${captain} makes a strong defensive play!`
-
-  };
-
-  document.getElementById("matchStatus")
-    .innerText = messages[type];
-
-  if (
-    type === "attack" &&
-    Math.random() > .55
-  ) {
-
-    userScore++;
-
-    document.getElementById("userScore")
-      .innerText = userScore;
-
-    document.getElementById("matchStatus")
-      .innerText =
-      `⚽ GOAL! ${captain} scores!`;
-
-  }
-
-}
-
-
-function finishMatch() {
-
-  document.getElementById("matchActions")
-    .style.display = "none";
-
-  document.getElementById("matchTimer")
-    .innerText = "FULL TIME";
-
-  document.getElementById("matchResult")
-    .classList.remove("hidden");
-
-  if (userScore >= aiScore) {
-
-    document.getElementById("matchStatus")
-      .innerText =
-      `🏆 Match complete! Final score ${userScore}-${aiScore}.`;
-
-  } else {
-
-    document.getElementById("matchStatus")
-      .innerText =
-      `🤝 Match complete! Final score ${userScore}-${aiScore}.`;
-
-  }
-
-}
-
-</script>
-
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/256746673971?text=Hello%20EarnQube%2C%20I%20need%20assistance%20with%20my%20account." target="_blank" rel="noopener" aria-label="Chat with EarnQube support">💬 <span>Chat with support</span></a>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const siteMenu = document.getElementById("siteMenu");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = siteMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+    siteMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        siteMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
+      });
+    });
+  </script>
 </body>
 </html>
