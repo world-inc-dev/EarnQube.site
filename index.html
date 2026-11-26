@@ -328,6 +328,81 @@
       .cta-panel { border-radius:30px; }
     }
 
+  
+    /* Unified Team Earnings card styling across every page region */
+    .topbar {
+      background:linear-gradient(135deg,#e8edf4 0%,#e3e8f0 52%,#edf0f5 100%);
+      border-bottom:2px solid rgba(255,255,255,.96);
+      box-shadow:0 8px 24px rgba(47,55,75,.06);
+      backdrop-filter:blur(16px);
+    }
+    .nav { min-height:82px; }
+    .brand { color:#171923; }
+    .brand-mark {
+      color:#fff;
+      border:2px solid #fff;
+      border-radius:17px;
+      background:linear-gradient(135deg,#7564ed,#5140d1);
+      box-shadow:0 8px 20px rgba(81,64,209,.16);
+    }
+    .brand span:last-child { color:#171923; }
+    .brand span:last-child span { color:#5744db; }
+    .nav-links { color:#4e5562; }
+    .nav-links a { padding:10px 12px; border-radius:14px; }
+    .nav-links a:hover { color:#5744db; background:rgba(255,255,255,.82); }
+    .nav-actions .btn-outline { color:#33365b; background:rgba(255,255,255,.82); border:2px solid #fff; }
+    .nav-actions .btn-gold { color:#fff; background:linear-gradient(135deg,#7564ed,#5140d1); }
+    .menu-toggle { color:#33365b; background:rgba(255,255,255,.9); border:2px solid #fff; }
+    footer {
+      margin-top:45px;
+      padding:38px 0 28px;
+      color:#171923;
+      background:linear-gradient(135deg,#e8edf4 0%,#e3e8f0 52%,#edf0f5 100%);
+      border-top:2px solid #fff;
+    }
+    .footer-main {
+      padding:26px;
+      border:2px solid rgba(255,255,255,.96);
+      border-radius:34px;
+      background:linear-gradient(115deg,rgba(255,255,255,.96),rgba(247,239,255,.94));
+      box-shadow:0 12px 30px rgba(47,55,75,.07);
+    }
+    .footer-brand p,.footer-bottom { color:#555d6b; }
+    .footer-links { color:#4e5562; }
+    .footer-links a {
+      padding:8px 12px;
+      border:1px solid #fff;
+      border-radius:14px;
+      background:rgba(255,255,255,.76);
+    }
+    .footer-links a:hover { color:#5744db; background:#fff; }
+    .footer-contact-label {
+      padding:8px 12px;
+      border:1px solid #fff;
+      border-radius:14px;
+      color:#4e5562;
+      background:rgba(255,255,255,.76);
+    }
+    .footer-bottom {
+      margin-top:20px;
+      padding:18px 8px 0;
+      border-top:1px solid rgba(255,255,255,.9);
+    }
+    .nav-links.open {
+      background:linear-gradient(135deg,#e8edf4,#edf0f5);
+      border:2px solid #fff;
+      border-radius:0 0 24px 24px;
+      box-shadow:0 12px 24px rgba(47,55,75,.08);
+    }
+    @media(max-width:700px) {
+      .nav { min-height:70px; }
+      .nav-links { color:#4e5562; }
+      .nav-links a { border-bottom:1px solid rgba(255,255,255,.8); }
+      .footer-main { padding:22px; border-radius:28px; }
+      .footer-links { gap:10px; }
+      .footer-bottom { gap:8px; }
+    }
+
   </style>
 </head>
 <body>
