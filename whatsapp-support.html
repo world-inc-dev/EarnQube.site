@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#25D366">
+  <title>WhatsApp Support | EarnQube</title>
+  <meta name="description" content="Save the EarnQube WhatsApp support number to your contacts before sending a message.">
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;padding:24px;display:grid;place-items:center;background:linear-gradient(135deg,#e8edf4,#e3e8f0 52%,#edf0f5);font-family:Arial,Helvetica,sans-serif;color:#202638}
+    .page{width:min(100%,470px);padding:30px;border:1px solid #fff;border-radius:28px;background:rgba(255,255,255,.94);box-shadow:0 18px 48px rgba(47,55,75,.12)}
+    .brand{display:flex;align-items:center;gap:10px;margin-bottom:28px;font-weight:800;font-size:20px}.mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:#25D366;color:#fff}
+    .icon{width:74px;height:74px;border-radius:24px;display:grid;place-items:center;background:#e5f9ed;color:#19a955;margin-bottom:20px}
+    h1{font-size:27px;line-height:1.2;margin:0 0 12px;letter-spacing:-.6px}p{font-size:15px;line-height:1.65;color:#586477;margin:0 0 20px}
+    .number-label{font-size:12px;font-weight:800;color:#697589;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+    .number{font-size:27px;font-weight:800;letter-spacing:1px;padding:17px 14px;border:1px solid #e1e7ee;border-radius:15px;background:#f7f9fc;text-align:center;margin-bottom:13px}
+    button{width:100%;border:0;border-radius:13px;padding:15px 18px;background:#25D366;color:#fff;font-size:15px;font-weight:800;cursor:pointer}
+    .steps{margin:22px 0 0;padding:18px;border-radius:16px;background:#f1f5f9}.steps strong{display:block;margin-bottom:7px;font-size:14px}.steps p{font-size:13px;margin:0;color:#536174}
+    .notice{margin-top:16px;padding:14px;border-left:4px solid #d7a62c;border-radius:9px;background:#fff8e7;color:#5d4b23;font-size:13px;line-height:1.55}
+    .back{display:block;text-align:center;margin-top:22px;color:#5142bd;text-decoration:none;font-size:13px;font-weight:800}
+    @media(max-width:480px){body{padding:16px}.page{padding:24px 20px}h1{font-size:24px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="brand"><span class="mark">E</span> EarnQube</div>
+    <div class="icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="43" height="43" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 3.2a12.1 12.1 0 0 0-10.3 18.4L4 28l6.6-1.7A12.1 12.1 0 1 0 16 3.2Z"/>
+        <path d="M11 9.5c-.6 0-1.2.8-1.2 1.8 0 3.7 5.1 9.2 9.3 9.2 1 0 2.1-.7 2.1-1.5l-2.8-1.4-1.5 1.3c-2.1-.8-3.6-2.3-4.3-4.2l1.2-1.4L12.5 10Z"/>
+      </svg>
+    </div>
+    <h1>Contact EarnQube on WhatsApp</h1>
+    <p>Before messaging our support team, copy the number below and save it in your phone contacts as <strong>EarnQube Support</strong>.</p>
+    <div class="number-label">EarnQube WhatsApp number</div>
+    <div class="number" id="supportNumber">0744405402</div>
+    <button id="copyNumber" type="button">Copy this number</button>
+    <section class="steps">
+      <strong>What to do next</strong>
+      <p>1. Copy the number above.<br>2. Save it in your phone contacts as EarnQube Support.<br>3. Open WhatsApp, find EarnQube Support in your contacts, and send us your message.</p>
+    </section>
+    <div class="notice"><strong>Please note:</strong> Messages sent before saving this number may not receive a reply or support guidance. Save the contact first, then inbox EarnQube.</div>
+    <a class="back" href="https://earnqube.site/">← Back to EarnQube</a>
+  </main>
+  <script>
+    const copyButton=document.getElementById("copyNumber");
+    const number=document.getElementById("supportNumber");
+    copyButton.addEventListener("click",async()=>{
+      const value=number.textContent.trim();
+      try{await navigator.clipboard.writeText(value);copyButton.textContent="Number copied";}
+      catch(e){
+        const range=document.createRange();range.selectNodeContents(number);
+        const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);
+        copyButton.textContent="Select the number to copy";
+      }
+    });
+  </script>
+</body>
+</html>
