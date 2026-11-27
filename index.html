@@ -72,7 +72,7 @@
     .btn-outline:hover { border-color: var(--gold); }
     .menu-toggle { display: none; width: 43px; height: 43px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--white); font-size: 20px; }
     .hero { padding: 92px 0 76px; }
-    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 65px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr; align-items: center; gap: 35px; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid var(--line);
       border-radius: 99px; color: var(--gold-light); background: rgba(213,180,92,.06);
@@ -86,6 +86,9 @@
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
     .hero-note { margin-top: 18px; color: var(--muted-2); font-size: 11px; }
     .hero-visual { position: relative; min-height: 440px; display: grid; place-items: center; }
+    .activity-board-placement { margin: 28px 0 34px; }
+    .activity-board-placement .hero-visual { min-height: 0; }
+    .activity-board-placement .earn-card { width: min(100%, 720px); transform: none; margin: 0 auto; }
     .visual-glow { position: absolute; width: 330px; height: 330px; border-radius: 50%; background: rgba(120,147,108,.14); filter: blur(55px); }
     .earn-card {
       position: relative; width: min(100%, 430px); padding: 28px; border: 1px solid rgba(213,180,92,.25);
@@ -649,25 +652,7 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
           </div>
           <p class="hero-note">Displayed amounts vary by activity, from UGX 2,500 to UGX 10,000. Tasks are subject to availability, eligibility and review.</p>
         </div>
-        <div class="hero-visual" aria-label="Preview of EarnQube activities and listed amounts">
-          <div class="visual-glow"></div>
-          <div class="earn-card">
-            <div class="card-top"><span>EarnQube activity board</span><span class="status-pill">10 ACTIVITY TYPES</span></div>
-            <div class="money-total">UGX 10,000</div>
-            <div class="money-caption">Highest listed amount among featured activities</div>
-            <div class="mini-activities">
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">💬</span>Moderated chat activity</div><span class="mini-amount">UGX 10,000</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">▶️</span>TikTok / YouTube videos</div><span class="mini-amount">UGX 5,000</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">📢</span>Sponsored content</div><span class="mini-amount">UGX 2,000</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">⚽</span>DLS challenges</div><span class="mini-amount">UGX 5,000</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">📲</span>WhatsApp promotion</div><span class="mini-amount">UGX 2,500</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">🛍️</span>Product advertising</div><span class="mini-amount">UGX 2,500</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">🧠</span>Daily trivia</div><span class="mini-amount">UGX 2,500</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">➗</span>Quick math</div><span class="mini-amount">UGX 2,500</span></div>
-              <div class="mini-row"><div class="mini-left"><span class="mini-icon">🎨</span>Colour challenge</div><span class="mini-amount">UGX 2,500</span></div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
 
@@ -678,6 +663,28 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
           <h2>Explore all EarnQube activities</h2>
           <p>Discover social-media creator campaigns alongside our existing digital promotions, video tasks, gaming and quick challenges. Existing activities remain available.</p>
         </div>
+        <div class="activity-board-placement">
+          <div class="hero-visual" aria-label="Preview of EarnQube activities and listed amounts">
+            <div class="visual-glow"></div>
+            <div class="earn-card">
+              <div class="card-top"><span>EarnQube activity board</span><span class="status-pill">10 ACTIVITY TYPES</span></div>
+              <div class="money-total">UGX 10,000</div>
+              <div class="money-caption">Highest listed amount among featured activities</div>
+              <div class="mini-activities">
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">💬</span>Moderated chat activity</div><span class="mini-amount">UGX 10,000</span></div>
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">▶️</span>TikTok / YouTube videos</div><span class="mini-amount">UGX 5,000</span></div>
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">📢</span>Sponsored content</div><span class="mini-amount">UGX 2,000</span></div>
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">⚽</span>DLS challenges</div><span class="mini-amount">UGX 5,000</span></div>
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">📲</span>WhatsApp promotion</div><span class="mini-amount">UGX 2,500</span></div>
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">🛍️</span>Product advertising</div><span class="mini-amount">UGX 2,500</span></div>
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">🧠</span>Daily trivia</div><span class="mini-amount">UGX 2,500</span></div>
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">➗</span>Quick math</div><span class="mini-amount">UGX 2,500</span></div>
+                <div class="mini-row"><div class="mini-left"><span class="mini-icon">🎨</span>Colour challenge</div><span class="mini-amount">UGX 2,500</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="activity-grid">
         <div class="activity-grid">
           <article class="activity-card featured">
             <div class="activity-top"><span class="activity-icon">🎵</span><span class="money-tag">UGX 500</span></div>
