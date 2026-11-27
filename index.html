@@ -977,25 +977,31 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
       TR:"TRY",EG:"EGP",MA:"MAD"
     };
     let localCurrency = "UGX";
-    let localCurrencyLocale = navigator.language || "en-UG";
+    let localCurrencyLocale = "en-UG";
     let ugxToLocalRate = 1;
     const formatLocalMoney = amount => new Intl.NumberFormat(localCurrencyLocale, {
-      style:"currency", currency:localCurrency, maximumFractionDigits: localCurrency === "UGX" || localCurrency === "RWF" || localCurrency === "JPY" ? 0 : 2
+      style:"currency", currency:localCurrency, maximumFractionDigits: ["UGX","RWF","JPY"].includes(localCurrency) ? 0 : 2
     }).format(amount * ugxToLocalRate);
     async function setupLocalCurrency() {
-      let country = "";
-      try {
-        const localeParts = new Intl.Locale(navigator.language || "en-UG");
-        country = localeParts.region || "";
-      } catch (_) {}
+      // Do not infer a visitor's country from browser language; it can differ from their location.
+      let country = "UG";
+      let locationConfirmed = false;
       try {
         const response = await fetch("https://ipapi.co/json/", {cache:"no-store"});
         if (response.ok) {
           const location = await response.json();
-          if (location && location.country_code) country = location.country_code.toUpperCase();
+          if (location && /^[A-Z]{2}$/.test(String(location.country_code || "").toUpperCase())) {
+            country = String(location.country_code).toUpperCase();
+            locationConfirmed = true;
+          }
         }
       } catch (_) {}
-      localCurrency = currencyByCountry[country] || "USD";
+      if (!locationConfirmed) {
+        // Keep UGX rather than guessing USD from an en-US browser setting.
+        country = "UG";
+      }
+      localCurrency = currencyByCountry[country] || "UGX";
+      localCurrencyLocale = country === "US" ? "en-US" : country === "GB" ? "en-GB" : country === "CA" ? "en-CA" : country === "UG" ? "en-UG" : country === "RW" ? "en-RW" : country === "KE" ? "en-KE" : country === "TZ" ? "en-TZ" : "en-" + country;
       try {
         const response = await fetch("https://open.er-api.com/v6/latest/UGX", {cache:"no-store"});
         if (!response.ok) throw new Error("Exchange-rate service unavailable");
@@ -1004,11 +1010,12 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
         if (typeof rate !== "number" || !Number.isFinite(rate) || rate <= 0) throw new Error("Currency rate unavailable");
         ugxToLocalRate = rate;
       } catch (_) {
-        // Never show a guessed conversion. Keep the original UGX amounts if live rates fail.
+        // Never show a guessed conversion. Keep original UGX values if live rates fail.
         localCurrency = "UGX";
+        localCurrencyLocale = "en-UG";
         ugxToLocalRate = 1;
       }
-      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
       const nodes = [];
       while (walker.nextNode()) {
         const node = walker.currentNode;
