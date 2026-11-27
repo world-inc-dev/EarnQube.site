@@ -127,6 +127,16 @@
     .activity-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; color: var(--gold-light); font-size: 12px; font-weight: 800; }
     .activity-link:hover { color: white; }
     .money-disclaimer { max-width: 850px; margin: 22px auto 0; padding: 14px 17px; border: 1px solid rgba(213,180,92,.16); border-radius: 13px; background: rgba(213,180,92,.045); color: #b8b6a8; font-size: 11px; text-align: center; }
+    .testimonials-section { background: linear-gradient(180deg, transparent, rgba(120,147,108,.045), transparent); }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 17px; }
+    .testimonial-card { display:flex; flex-direction:column; min-height:220px; padding:24px; border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); background:linear-gradient(150deg,rgba(21,31,23,.96),rgba(14,21,16,.96)); }
+    .testimonial-stars { color:var(--gold-light); letter-spacing:3px; font-size:13px; margin-bottom:15px; }
+    .testimonial-card > p { color:#c5cec2; font-size:14px; line-height:1.75; flex:1; }
+    .testimonial-person { display:flex; align-items:center; gap:11px; padding-top:17px; border-top:1px solid rgba(255,255,255,.08); }
+    .testimonial-avatar { width:38px; height:38px; display:grid; place-items:center; border-radius:50%; color:var(--gold-light); background:rgba(213,180,92,.12); font-weight:800; }
+    .testimonial-person strong,.testimonial-person span { display:block; }
+    .testimonial-person strong { color:var(--white); font-size:12px; }
+    .testimonial-person div span { color:var(--muted-2); font-size:10px; margin-top:3px; }
     .how-section { background: linear-gradient(180deg, transparent, rgba(120,147,108,.055), transparent); }
     .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 17px; }
     .step { padding: 25px; border: 1px solid rgba(255,255,255,.075); border-radius: 19px; background: rgba(17,26,19,.72); }
@@ -321,6 +331,7 @@
       background:linear-gradient(115deg,#fae7c9,#efd8f2); color:#4e5562;
     }
     @media(max-width:700px) {
+      .testimonial-grid { grid-template-columns:1fr; }
       .hero { padding:35px 0 30px; }
       .hero-grid { gap:22px; }
       .hero-visual { min-height:0; }
@@ -840,6 +851,43 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
       </div>
     </section>
 
+    <section class="section testimonials-section" id="testimonials">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Community voices</div>
+          <h2>Stories from different walks of life</h2>
+          <p>Illustrative member stories showing the kinds of experiences EarnQube aims to support.</p>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Five stars">★★★★★</div>
+            <p>“I like having different activities in one place. The instructions help me understand what each task involves before I begin.”</p>
+            <div class="testimonial-person"><span class="testimonial-avatar">S</span><div><strong>Student</strong><span>Illustrative profile</span></div></div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Five stars">★★★★★</div>
+            <p>“The simple layout makes it easy to browse opportunities around my daily responsibilities and see what is available.”</p>
+            <div class="testimonial-person"><span class="testimonial-avatar">M</span><div><strong>Single mother</strong><span>Illustrative profile</span></div></div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Five stars">★★★★★</div>
+            <p>“I appreciate seeing the task details and listed amounts clearly. It makes comparing activities straightforward.”</p>
+            <div class="testimonial-person"><span class="testimonial-avatar">A</span><div><strong>Accountant</strong><span>Illustrative profile</span></div></div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Five stars">★★★★★</div>
+            <p>“There are several types of activities to explore, so I can look for campaigns that suit my interests and schedule.”</p>
+            <div class="testimonial-person"><span class="testimonial-avatar">B</span><div><strong>Small-business owner</strong><span>Illustrative profile</span></div></div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Five stars">★★★★★</div>
+            <p>“The platform brings the opportunities together in a clean space. I can check the requirements before choosing a task.”</p>
+            <div class="testimonial-person"><span class="testimonial-avatar">G</span><div><strong>Recent graduate</strong><span>Illustrative profile</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section how-section" id="how-it-works">
       <div class="wrap">
         <div class="section-head">
@@ -858,18 +906,15 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
     <section class="section" id="faq">
       <div class="wrap">
         <div class="section-head">
-          <div class="section-kicker">Helpful information</div>
+          <div class="section-kicker">Quick answers</div>
           <h2>Frequently asked questions</h2>
-          <p>Important details to understand before joining and participating.</p>
+          <p>The essentials, made simple.</p>
         </div>
         <div class="faq-list">
-          <article class="faq-item"><h3>What activities are featured?</h3><p>Separate TikTok, YouTube, Instagram and X like/comment campaigns, sponsored video posting and viewing, moderated chat, sponsored-content tasks, Dream League Soccer challenges, WhatsApp Status Promotion, Product Advertising, Daily Trivia, Quick Math and Colour Recognition.</p></article>
-          <article class="faq-item"><h3>What amounts are listed for activities?</h3><p>Social-media likes: UGX 500; social-media comments: UGX 1,000, only for platform-permitted campaigns. Moderated chat: UGX 10,000; TikTok and YouTube viewing tasks: UGX 5,000 each; sponsored video posting: UGX 2,000; sponsored-content tasks: UGX 2,000; Daily Trivia, Quick Math and Colour Recognition: UGX 2,500 each. DLS challenges: UGX 5,000. Approval conditions apply.</p></article>
-          <article class="faq-item"><h3>Is every activity always available?</h3><p>No. Availability can depend on current campaigns and platform updates. Sign in to see which activities are currently open.</p></article>
-          <article class="faq-item"><h3>Are chat and video activities safe?</h3><p>Chat activities should be moderated and kept on-platform. Never share your address, phone number, passwords, private photos or other personal details with strangers. Video tasks should not ask you to manipulate likes, views or subscriptions.</p></article>
-          <article class="faq-item"><h3>When is a payment approved?</h3><p>Submissions are subject to the activity's instructions, eligibility requirements and review. Completing a task does not automatically guarantee approval.</p></article>
-          <article class="faq-item"><h3>Where do I access the activities?</h3><p>Create an account or sign in through the member portal, then check the available activities and instructions in your account.</p></article>
-          <article class="faq-item"><h3>How can I get help?</h3><p>Contact the EarnQube support team through WhatsApp or email using the details at the bottom of this page.</p></article>
+          <article class="faq-item"><h3>What activities can I explore?</h3><p>Social campaigns, sponsored video tasks, moderated chat, promotions, gaming challenges and quick skill activities.</p></article>
+          <article class="faq-item"><h3>How much can I make?</h3><p>Each activity displays its amount and requirements. Listed amounts are for qualifying tasks and are subject to review and approval.</p></article>
+          <article class="faq-item"><h3>Are activities always available?</h3><p>Availability changes as campaigns open and close. Sign in to see the activities currently available to you.</p></article>
+          <article class="faq-item"><h3>How do I get started?</h3><p>Create an account, choose an available activity, follow its instructions and submit any required work for review.</p></article>
         </div>
       </div>
     </section>
