@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EarnQube Uganda | Online Earning Activities & Digital Tasks</title>
-  <meta name="description" content="Explore online earning opportunities in Uganda with EarnQube. Discover digital tasks, moderated chat, video activities, sponsored content, promotions and skill games.">
-  <meta name="keywords" content="make money online in Uganda, online earning platform Uganda, earn money Uganda, digital tasks Uganda, online activities Uganda, EarnQube, TikTok tasks, YouTube tasks, sponsored content, Dream League Soccer challenges">
+  <title>EarnQube | Online Activities & Digital Task Opportunities</title>
+  <meta name="description" content="Explore digital activities and online task opportunities with EarnQube. View activity amounts in your local currency and discover tasks available in your country.">
+  <meta name="keywords" content="EarnQube, online activities, digital task opportunities, local currency, TikTok tasks, YouTube tasks, sponsored content, online promotions, skill challenges">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://earnqube.site/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="EarnQube Uganda | Online Earning Activities & Digital Tasks">
-  <meta property="og:description" content="Explore online earning opportunities in Uganda through digital tasks, moderated chat, video activities, sponsored content, promotions and skill games on EarnQube.">
+  <meta property="og:title" content="EarnQube | Online Activities & Digital Task Opportunities">
+  <meta property="og:description" content="Explore digital activities and online task opportunities with EarnQube. View activity amounts in your local currency and discover tasks available in your country.">
   <meta property="og:url" content="https://earnqube.site/">
   <meta property="og:site_name" content="EarnQube">
   <meta name="theme-color" content="#e8edf4">
@@ -1021,7 +1021,7 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
         });
       });
     }
-    setupLocalCurrency();
+    const localCurrencyReady = setupLocalCurrency();
 
     //live notifications. These are live activities , and live member transactions.
     const spotlightItems = [
@@ -1052,7 +1052,8 @@ footer{margin-top:24px;background:linear-gradient(135deg,#e8edf4,#edf0f5);border
         spotlight.classList.add("is-visible");
         spotlightIndex = (spotlightIndex + 1) % spotlightItems.length;
       };
-      window.setTimeout(() => {
+      window.setTimeout(async () => {
+        await localCurrencyReady;
         showSpotlight();
         window.setInterval(() => {
           spotlight.classList.remove("is-visible");
